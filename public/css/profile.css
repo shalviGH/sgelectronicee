@@ -1,0 +1,151 @@
+.contDataProfile{
+    width:  100%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.dataProfile{
+    margin-top: 50px;
+    background-color: rgba(21, 30, 36, 0.945);
+    height: 150px;
+    width: 80%;
+    border-radius: 3%;
+    border-bottom-right-radius: 0%;
+    border-bottom-left-radius: 0%;
+    display: flex;
+    flex-direction: column;
+}
+
+.dataProfile2{
+    margin-top: 0px;
+    height: 100%;
+    border-top:1% ;
+    border-radius: 3%;
+    border-top-right-radius: 0%;
+    border-top-left-radius: 0%;
+    margin-bottom: 20px;
+    background-color: rgba(195, 211, 221, 0.945);
+    display: flex;
+    align-items: center;
+}
+
+.contImgProfile{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imgProfile{
+    width: 120px;
+    height: 120px;
+
+    position: relative;
+    background-color: rgb(221, 237, 237);
+    border-radius: 100%;
+}
+
+.dato{
+    margin-top: 60px;
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+}
+.area{
+    color: rgb(157, 35, 159);
+    font-size: 18px;
+    font-weight: bold; 
+   
+}
+
+.dataDescription{
+    text-align: justify;
+    text-justify: center;
+    width: 70%;
+}
+
+.btnProfile{
+    background-color: blueviolet;
+    font-size: 14px;
+    border-radius: 15px;
+    width: 120px;
+    height: 35px;
+    color: white;
+    font-size: 14px;
+    font-weight: bold; 
+     margin-bottom: 20px;
+}
+
+.btnProfile:hover{
+    background-color: rgb(66, 25, 104);
+    
+}
+
+.pUserInfo{
+    margin-top: 10px;
+}
+
+.contUserInfo{
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+    width: 100%;
+}
+
+.contBtnOptioProfile{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+}
+
+
+.contDataProfile1{
+    padding: 10px;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    
+}
+.contDataUs{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.dataPro{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+
+@media screen and (min-width: 769px){
+    .contDataProfile{
+        margin-top: -10px;
+    }
+
+    .dataPro{
+      margin: 10px;
+    }
+
+    .dataProfile{
+        width: 40%;
+    }
+
+    .contDataUs{
+        flex-direction: row;
+    }
+
+   
+}

@@ -1,0 +1,163 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: rgba(233, 233, 238, 0.809);
+    
+}
+
+.containerLogin{
+    background-color: #131212;
+    display: flex;
+    flex-direction: row;
+    align-content: space-around;
+    align-items: center;
+    border-radius:5%;
+
+    width: 90%;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.contImgLogin{
+    /*background: hsla(268, 86%, 44%, 0.809);*/
+    width: 50%;
+    height: 100%;
+    padding: 10px;
+    margin-right: 5px;
+    display: flex;
+    align-content: center;
+}
+.imgLogin{
+    width: 100%;
+    height: 120px;
+}
+.contDataLogin{
+    background-color: rgb(16, 16, 19);
+    display: flex;
+    width: 45%;
+    height: 100%;
+    flex-direction: column;
+    padding: 5px;
+    border-bottom-right-radius: 5%;
+    border-top-right-radius: 5%;
+    
+}
+.contGreeting{
+    margin-bottom: 0px;
+    margin-top: 10px;
+    height: 50px;
+
+    display: flex;
+    flex-direction: column;
+   
+}
+.lblM{
+    font-weight: bold;
+}
+.conTxtLogo{
+    background-color: rgb(16, 16, 19);
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+
+.lblLog{
+    color:hsl(0, 0%, 98%);
+    background-color: none; 
+}
+
+.txtLogin{
+    border: 0px solid  #f1edf5;
+    background: none;
+    border-bottom:2px solid hsla(0, 0%, 100%, 0.809);
+    margin-bottom: 8px;
+    color: #f1edf5;
+    height: 30px;
+}
+
+.contLoYorAcount{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+}
+
+.contForgotPass{
+    margin-left: 60px;
+    font-size: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.btnLogIn{
+    background: hsla(264, 11%, 91%, 0.809);
+    width: 80px;
+    height: 30px;
+    border-radius: 10%;
+    margin-left: 60px;
+}
+.lblCaccount{
+    margin-top: 5px;
+    margin-left: 60px;
+}
+
+.lblL{
+    font-weight: initial;
+}
+
+
+/*class fro te footer*//*class fro te footer*/
+/*class fro te footer*//*class fro te footer*/
+.footer{
+    background: rgb(16, 16, 19);
+    display: flex;
+    align-items: center;
+    height: 80px;
+    width: 100%;
+    margin: auto;
+    margin-top: 0px;
+    justify-content: space-between;
+}
+/*class for container image red social*/
+.contImgRedSocial{
+    height: 100px;  
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 15%  ;
+}
+
+.imgFooter{
+    width: 60px;
+    height:60px;
+}
+
+.imgFacebook{
+    height: 300px;
+    width: 200px;
+}
+.lblFooter{
+    margin-right: 10px;
+    color: white;
+    font-size: 15px;
+}
+
+
+@media screen and (min-width: 769px){
+    .containerLogin{
+        margin-top: 100px;
+        width: 35%;
+    }
+    .contImgLogin{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .imgLogin{
+        width: 60%;
+        height: 210px;
+    }
+}

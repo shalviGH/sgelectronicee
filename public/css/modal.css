@@ -1,0 +1,231 @@
+
+  .flex-view{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+
+  .modal-view{
+    display: none;/*para ocultar el modal*/
+    position: fixed;
+    z-index: auto;
+    overflow: auto;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0, 0.452);/*color de fondocuandomse abre el moadal*/
+  }
+
+.contenido-modal-view{
+  position: relative;
+  margin:auto;
+  width: 100%;
+
+  /*box-shadow: 2 2 6px 2 rgba(255, 255,255, .4); */
+  animation-name: modal-view;
+  animation-duration: 1s;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+/*coment for know his use*/
+/*@keyframes modal-view{
+  from{top:-330; opacity: 0;}
+  to{top: 0; opacity: 1;}
+}*/
+
+
+.modal-container-service{
+  width: 90%;
+  height: 70%; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.data-modal{
+  width: 80%;
+}
+
+.contenido-span-close{
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+.div-modal{
+  width: 80%;
+  height: 120px;
+}
+
+.lbl-url{
+  margin-bottom: 20px;
+}
+
+@media screen and (min-width: 769px){
+  .contenido-modal-view{
+    width: 50%;
+  }
+
+}
+
+
+/*::::::::::::::Estyle modal for delete data::::::::::::*/
+/*::::::::::::::Estyle modal for delete data::::::::::::*/
+
+.contMsDelete{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.lblMsDelete{
+  text-align: justify;
+  width: 80%;
+  margin-top: 15px;
+}
+
+.contBtnModalDelete{
+  margin-top: 20px;
+  margin-bottom: 18px;
+}
+
+
+
+/*Modal fro delete product*/
+
+/*Estyle for modal add product*/
+
+.modal{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(12, 12, 14, 0.9);
+  display: block;
+}
+
+.bodyModal{
+  width: 100%;
+  height: 100%;
+
+  display: -webkit-inline-flex;
+  display: -moz-inline-flex;
+  display: -ms-inline-flex;
+  display: -o-inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.formModal{
+  background-color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  border-radius: 20px;
+  border: 2px solid rebeccapurple;
+}
+
+.modalTitle{
+  margin-top: -30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 100%;
+}
+
+.msModal{
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.contBtnModal{
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 30px;
+  width: 90%;
+}
+.contBtnModalAI{
+  width: 70%;
+}
+
+
+
+/*class for the class of te message*//*class for the class of te message*/
+/*class for the class of te message*//*class for the class of te message*/
+.msAlert{
+  
+  width: 80%;
+  margin: auto;
+  margin-top: 20px;
+
+}
+
+
+input[type=”file”]#nuestroinput {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+  }
+
+  /*clase para los botones delos modales*/
+  .contBtnModal{
+    width: 60%;
+  }
+
+@media screen and (min-width:769px){
+  .contModalDelete{
+    width: 70%;
+  }
+
+  .contMsDelete{
+    width: 80%;
+    flex-direction: row;
+    margin-top: 15px;
+  }
+
+  .lblMsDelete{
+    text-align: center;
+  }
+
+  .contBtnModalDelete{
+    margin-top: 30px;
+    margin-bottom: 25px;
+  }
+
+  .iconModal{
+    height: 70px;
+    width: 70px;
+  }
+
+  .TitleModalDelete{
+    margin-top: 30px;
+  }
+
+  .formModal{
+    width: 30%;
+  }
+
+}

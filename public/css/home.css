@@ -1,0 +1,495 @@
+/*::::::::Style for bar navigation:::::::::::*/
+/*::::::::Style for bar navigation:::::::::::*/
+/*::::::::Style for bar navigation:::::::::::*/
+
+.navigation{
+    background: rgb(16, 16, 19);
+    opacity: 90%;
+    width: 100%;
+    margin-right: 0px;
+    height: 70px;
+
+    /*display: flex;
+    align-items: row;
+    justify-content: space-between;*/
+
+}
+
+.logNav{
+    height: 60px;
+    width: 100px;
+    margin-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: none;
+}
+
+.main{
+    border: none;
+    
+    /*background: hwb(240 7% 87% / 0.849);*/
+    background:rgba(0,0,0,0.0);
+}
+
+.navbar-collapse{
+    border-color: none;
+    border:none;
+}
+/*container Button*/
+.navbar-header{
+    border-color: 4px solid #5e1020c9;
+    /*background-color: rgb(102, 11, 113);*/
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.navbar-toggle{
+    background: hsla(334, 59%, 44%, 0.479);
+}
+/* Menu desplegable*/
+.navbar-nav{
+    /*width: 400px;*/
+    width: 60%;
+    background: hsla(337, 91%, 13%, 0.479);
+    margin-top: 0px;
+}
+
+.btnMain{
+    border-top: 2px solid rgba(0, 0, 0 , .5);
+}
+
+.btnMain:hover{
+    background:rgba(0, 0, 0 , .5);
+}
+/*.btnMainSelected{
+    background:rgba(0, 0, 0 , .5);
+}*/
+
+/*container button for container button list*/
+.btnContBtnList{
+    display: flex;
+    flex-direction: column;
+    height: 48px;
+    align-items: center;
+    justify-content: center;
+}
+/*class for button option*/
+.btnMainList{
+    font-size: 22px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 5px;
+    padding-right: 5px;
+    
+    color: rgb(233, 228, 237);
+    
+}
+
+.btnMainList:hover{
+    background:rgba(0, 0, 0 , .5);
+    color: rgb(233, 228, 237);
+    text-decoration: none;
+}
+
+/*class for conttainer list in to the button*/
+.optionList1{
+    height: 100%;
+    align-items: center;
+    
+}
+
+.optionList{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    height: 120px;
+    background: hsla(281, 76%, 39%, 0.49);
+
+}
+
+.itemListBtn{
+    height: 40px;
+    width: 100%;
+    text-align: justify;
+    font-size: 15px;
+    font-weight: bold;
+    text-indent: 5px;
+    color: blanchedalmond;
+    text-decoration: none;
+    background:  hsla(281, 76%, 39%, 0.49);
+}
+
+.itemListBtn:hover{
+    background:rgba(0, 0, 0 , .5);
+    color: rgb(233, 228, 237);
+    text-decoration: none;
+}
+
+
+/*Container elemento home*/
+.containerHome{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+}
+.headDoc{
+    margin-left: 20px;
+}
+.contElemntLeft{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 70%;
+}
+.contElemntRight{
+    display: flex;
+    width: 60%;
+}
+.formDoc{
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    justify-content: flex-start;
+}
+.contDataUpload{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 90%;
+    height: 200px;
+    border: 3px;
+    background: rgba(93, 28, 125, .200);
+    border-radius: 5%;
+    padding-right: 5px;
+}
+
+.element{
+    margin-top: 10px;
+    color: beige;
+    margin-left: 5px;
+}
+.btbUpFile{
+    width: 100px;
+    background: rgba(57, 107, 128, 0.413);
+    border: none;
+    height: 30px;
+    border-radius: 2%;
+}
+.btbUpFile:hover{
+    background: rgba(13, 64, 85, 0.413);
+    border: none;
+}
+
+/*class for button product*/
+.btnMainList{
+    margin-left: 5px;
+    margin-left: 10px;
+}
+
+
+
+.contLogoHeader2
+{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    width: 100%;
+    align-items: center;
+    background-color: none;
+    display: none;
+    /*background: hwb(240 7% 87% / 0.849);*/
+}
+.lblWelcome{
+    width: 100%;
+    color: white;
+}
+.imgUser{
+    width: 70px;
+    height: 70px;
+}
+
+.contElement{
+    width: 100%;
+    height: 460px;
+    /*padding: 5px;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    overflow-y: scroll;
+}
+
+.imgProduct{
+    width: 200px;
+    height: 200px;
+}
+.contListImage{
+    margin-top: 30px;
+    width: 100%;
+    display: flexbox;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.contImg{
+    margin-bottom: 10px;
+    background-color: rgb(237, 219, 219);
+    display: flex;
+    flex-direction: column;
+    border-radius: 3%;
+}
+.line{
+    width: 100%;
+    height: 1px;
+    background-color: rgb(90, 86, 86);
+}
+
+.lblInfoProduct{
+    margin-left: 10px;
+}
+
+.lblInfoProduct2{
+    color: rgb(37, 118, 162);
+}
+
+
+/*Estyle for modal add product*/
+
+.modal1{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 1 , 0.9);
+    display: block;
+}
+
+.bodyModal{
+    width: 100%;
+    height: 100%;
+
+    display: -webkit-inline-flex;
+    display: -moz-inline-flex;
+    display: -ms-inline-flex;
+    display: -o-inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.formModal{
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    border-radius: 20px;
+    border: 2px solid rebeccapurple;
+}
+
+.dataP{
+    width: 70%;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.contBtnAddP{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.btnAddP{
+    width: 100px;
+    height: 30px;
+    background-color: rgb(63, 63, 190);
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.btnCloseInfo{
+    width: 150px;
+}
+.btnpCancel{
+    background-color: rgb(235, 175, 23);
+     display: flex;
+     align-items: center;
+     justify-content: center;
+}
+
+/*class for contain button option product*/
+.contBtnProduct{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 5px;
+    margin-top: 5px;
+    padding-top: 10px;
+}
+
+.btnMainSelected{
+    background:rgba(0, 0, 0 , .5);
+    border-radius: 2px;
+    border-bottom: 2px solid white;
+}
+
+
+/*SLIDE  FOTOS HOME*//*SLIDE  FOTOS HOME*//*SLIDE  FOTOS HOME*/
+/*SLIDE  FOTOS HOME*//*SLIDE  FOTOS HOME*//*SLIDE  FOTOS HOME*/
+/*SLIDE  FOTOS HOME*/
+.contSlider{
+    padding: 10px;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+.slider {
+    
+	width: 90%;
+	margin: auto;
+	overflow: hidden;
+    height: 90%;
+}
+
+.slider ul {
+	display: flex;
+	padding: 0;
+	width: 400%;
+	
+	animation: cambio 20s infinite alternate linear;
+}
+
+.slider li {
+	width: 100%;
+	list-style: none;
+}
+
+.slider img {
+	width: 100%;
+    height: 100%;
+}
+
+@keyframes cambio {
+	0% {margin-left: 0;}
+	20% {margin-left: 0;}
+	
+	25% {margin-left: -100%;}
+	45% {margin-left: -100%;}
+	
+	50% {margin-left: -200%;}
+	70% {margin-left: -200%;}
+	
+	75% {margin-left: -300%;}
+	100% {margin-left: -300%;}
+}
+
+
+@media screen and (min-width: 769px){
+    
+    
+    .main{
+        display: flex;
+        width: 120%;
+        justify-content: flex-end;
+        margin-bottom: 0px;
+        align-items: center;
+    }
+
+    .navigation{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        
+    }
+
+    
+    
+    .nav{
+         margin-bottom: 5px;
+    }
+
+    .btnMain{
+        border-top: 0px solid rgba(0, 0, 0 , .5);
+    }
+    .btnMain:hover{
+        background: none;
+    }
+
+    ul li a{
+        margin-right: 10px;
+        font-size: 20px;
+        color: white;
+        margin-right: 5px;
+        /*border: 2px solid rebeccapurple;*/
+
+    }
+
+    .btnMain:hover{
+       /* background: rgb(140, 132, 148);*/
+        border-bottom: 2px solid white;
+    }
+
+    /*Container button main*/
+    .navbar-nav{
+        width: 100%;
+        margin-right: 5px;
+        margin-left: 10px;
+        display: flex;
+        align-content: space-between;
+        justify-content: flex-end;
+        background: none;
+    }
+
+    .contDataUpload{
+        width: 50%;
+        border-radius: 5%;
+    }
+
+    .contLogoHeader2
+    {
+        display: flex;
+        background-color:none;
+    }
+
+    /*Form modal for add product*/
+    .formModal{
+        width: 40%;
+        
+    }
+
+
+    /*:::::::::::::Style products::::::::::::::*/
+    .contElement{
+        justify-content: flex-start;
+    }
+
+
+    .contSlider{
+        height: 455px;
+        width: 100%;
+    }
+    .slider img {
+        width: 100%;
+        height: 400px;
+    }
+    
+    
+}
