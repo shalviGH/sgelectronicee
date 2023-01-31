@@ -231,43 +231,6 @@
     overflow-y: scroll;
 }
 
-.imgProduct{
-    width: 250px;
-    height: 200px;
-}
-.contListImage{
-    margin-top: 30px;
-    width: 100%;
-    display: flexbox;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-.contImg{
-    margin-bottom: 10px;
-    width: 250px;
-    
-    background-color: rgb(237, 219, 219);
-    display: flex;
-    flex-direction: column;
-    border-radius: 3%;
-}
-.line{
-    width: 100%;
-    height: 1px;
-    background-color: rgb(90, 86, 86);
-}
-
-.lblInfoProduct{
-    margin-left: 10px;
-}
-
-.lblInfoProduct2{
-    color: rgb(37, 118, 162);
-}
 
 
 /*Estyle for modal add product*/
