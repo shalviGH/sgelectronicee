@@ -23,7 +23,7 @@ body{
 
 .contImgLogin{
     /*background: hsla(268, 86%, 44%, 0.809);*/
-    width: 50%;
+    width: 40%;
     height: 100%;
     padding: 10px;
     margin-right: 5px;
@@ -37,7 +37,7 @@ body{
 .contDataLogin{
     background-color: rgb(16, 16, 19);
     display: flex;
-    width: 45%;
+    width: 60%;
     height: 100%;
     flex-direction: column;
     padding: 5px;

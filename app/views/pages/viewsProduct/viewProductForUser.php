@@ -1,6 +1,6 @@
 
-<div class ="containerHome js-contElementsProducto1">
-    <div class="contElement">
+<div class ="containerHome3 js-contElementsProducto1">
+    
             <?php 
                 if(isset($data['product'])){
                     $op = $data['product'];
@@ -75,7 +75,7 @@
 
             </div>
         </div>
-    </div>
+                
 </div>
        
       

@@ -69,6 +69,31 @@
 
 }
 
+/*class for contain producd*/
+.contElement{
+    background-color: red;
+    display: flex;
+    align-items: flex-start;
+}
+
+.contElement{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;    
+    width: 90%;
+    padding-bottom: 30px;
+}
+
+/*class  for container lis product*/
+.contListImage{
+    overflow-y: scroll;
+    display: flex;
+    height: 400px;
+    margin-top: 10px;
+    padding-top: 10px;  
+}
+
 /*class of product table*/
 table {
     border-spacing: 5px;
