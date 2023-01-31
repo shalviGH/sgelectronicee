@@ -21,6 +21,11 @@ body{
     margin-top: 10px;
 }
 
+.formLogin{
+    padding: 20px;
+    margin-top: 40px;
+}
+
 .contImgLogin{
     /*background: hsla(268, 86%, 44%, 0.809);*/
     width: 40%;
@@ -147,7 +152,7 @@ body{
 
 @media screen and (min-width: 769px){
     .containerLogin{
-        margin-top: 100px;
+        margin-top: 20px;
         width: 35%;
     }
     .contImgLogin{

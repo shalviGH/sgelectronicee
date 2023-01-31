@@ -17,6 +17,18 @@
 			return $result; 
 		}
 
+
+		public function verifyUser($data)
+		{
+			$this->db->query('SELECT * FROM users WHERE userName = :userName');
+			$this->db->bind(':userName', $data['userName']);
+			$row = $this->db->register();
+
+			return $row;
+		}
+
+
+
 		public function addUser($data)
 		{
 			$this->db->query('INSERT INTO users 

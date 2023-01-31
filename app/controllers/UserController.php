@@ -48,6 +48,16 @@
 		public function addUser(){
 			if($_SERVER['REQUEST_METHOD'] == 'POST')
 			{
+
+				$phone = trim($_POST['phone']);
+
+				if($phone == null){
+					$phone = "0000000000";
+				}
+				else{
+					$phone = trim($_POST['phone']);
+				}
+
 				$data = [
 					
 					/*'name' => trim($_POST['name']),
@@ -60,24 +70,53 @@
 					'name' => trim($_POST['userName']),
 					'lastName' => "kkkkkkkkkkkk",
 					'email' => "fffffffffffff",
-					'phone' => "dddddddddddddd",
+					'phone' => $phone,
 					'userName' => trim($_POST['userName']),
 					'pass' => trim($_POST['pass']),
-				];	
+				];
+				
+				$row = $this->userModel->verifyUser($data);
 
-				if ($this->userModel->addUser($data)) {
+				if($row == null)
+				{
+					if ($this->userModel->addUser($data)) {
+						//redirection('/Users/users');
+	
+						$_SESSION['register'] = "insert";
+						redirection('/Paginas/login');
+						//echo "vfbsglkd";
+	
+						$_SESSION['register'] = "true";
+					}
+					else {
+						die('Ocurred a error');
+					}
+				}
+				else{
+					//echo "El usuario ya existe en la base de datos";
+					$_SESSION['register'] = "false";
+					redirection('/Paginas/login');
+				}
+					
+				
+
+
+
+				/*if ($this->userModel->addUser($data)) {
 					//redirection('/Users/users');
 
 					$_SESSION['register'] = "insert";
-					redirection('/Paginas/index');
+					redirection('/Paginas/login');
 					//echo "vfbsglkd";
+
+					$_SESSION['register'] = "true";
 				}
 				else {
 					die('Ocurred a error');
-				}
+				}*/
 
 
-				print_r($data);
+				//print_r($data);
 			}
 			else{
 				$data = [

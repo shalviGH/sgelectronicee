@@ -3,9 +3,39 @@
 
 ?>
 
+<?php 
 
-<div class="contElement">
-<form action="<?= RUTA_URL;?>/UserController/login" method="POST" class="formLogin-Js js-login2" >
+	if(isset($_SESSION['register']))
+	{
+
+		$insert = $_SESSION['register'];
+
+		if($insert == 'true')
+		{
+?>
+			<div class="alert alert-success alert-dismissable msAlert">
+				<button type="button" class="close" data-dismiss="alert">&times;</button>
+				<strong>¡Message!</strong> El registro se relizo con exito, ya puede inicar sesion con su cuenta.
+			</div>
+<?php
+		}
+		elseif ($insert == 'false') {
+		?>
+			<div class="alert alert-danger alert-dismissable msAlert">
+				<button type="button" class="close" data-dismiss="alert">&times;</button>
+				<strong>¡Message!</strong> El suario / contraseña ya existen pruebe con otra.
+			</div>
+
+		<?php	# code...
+		}		
+	}
+	
+
+?>
+
+
+<div class="contElementd">
+<form action="<?= RUTA_URL;?>/UserController/login" method="POST" class="formLogin-Js formLogin js-login2" >
 	<!--form action="/Users/addUser" method="POST" class="formLogin-Js"-->
 		<div class="containerLogin">
 			<div class="contImgLogin">
@@ -54,11 +84,14 @@
 					<label class="lblLog lblL">Phone</label>
 					<input type="phone" name="phone" class="txtLogin"-->
 
-					<label class="lblLog lblL">User name</label>
+					<label class="lblLog lblL">User Name</label>
 					<input type="text" name="userName" class="txtLogin">
 
 					<label class="lblLog lblL">Password</label>
 					<input type="password" name="pass" class="txtLogin">
+
+					<label class="lblLog lblL">Phone</label>
+					<input type="phone" name="phone" class="txtLogin" placeholder= "Este campo no es obligatorio">
 				</div>
 
 				
