@@ -1,10 +1,8 @@
-.containerAbout{
-    
-    height: 300px;
+.containerAbout{ 
     width: 100%;
     display: flex;
-    flex-direction: row;
-    align-items: flex-start;
+    flex-direction: column;
+    align-items: center;
     justify-content: space-around;
     margin: auto;
     margin-top: 20px;
@@ -13,14 +11,18 @@
 }
 
 .contInfoCompany{
+    margin-bottom: 20px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
 }
 
-.contInfoContacs{
+.imgA{
+    margin-bottom: 20px;
+}
 
+.contInfoContacs{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -28,9 +30,10 @@
 }
 
 .contImgAbout{
+    margin-top: 20px;
     background-color: rgb(0, 0, 0, .7);
     height: 55px;
-    width: 150px;
+    width: 300px;
     margin-top: 5px;
     display: flex;
     align-items:center;
@@ -38,9 +41,6 @@
 
 }
 
-.contImgAbout :hover{
-    background-color: black;
-}
 
 .imgAbout{
     margin: 9px;
@@ -51,4 +51,15 @@
 .imgFacebook{
     height: 40px;
     width: 40px;
+}
+
+@media screen and (min-width: 769px){
+    .containerAbout{ 
+        
+        flex-direction: row;
+        
+    }
+
+
+
 }
