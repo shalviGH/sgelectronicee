@@ -39,6 +39,11 @@
                         <label>User</label>
                         <input type="text" disabled = "true" id="js-inpProfile4" value="<?php echo $data['userName']; ?>" placeholher="pass" name="userName" required>
                     </div>
+
+                    <div class ="contUserInfo">
+                        <label>Telefono</label>
+                        <input type="text" disabled = "true" id="js-inpProfile2"  value="<?php echo $data['phone']; ?>" placeholher="pass" name="phone" required>
+                    </div>
                 </div>    
 
                <div class="dataPro"  > 

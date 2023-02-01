@@ -12,6 +12,7 @@
 		<link rel="stylesheet" type="text/css" href="<?php echo RUTA_URL?>/css/profile.css">
 		<link rel="stylesheet" type="text/css" href="<?php echo RUTA_URL?>/css/product.css">
 		<link rel="stylesheet" type="text/css" href="<?php echo RUTA_URL?>/css/modal.css">
+		<link rel="stylesheet" type="text/css" href="<?php echo RUTA_URL?>/css/about.css">
 		<link rel="stylesheet" type="text/css" href="<?php echo RUTA_URL?>/css/dropzone.css">
 
 		<!--link href="https://unpkg.com/dropzone@6.0.0-beta.1/dist/dropzone.css" rel="stylesheet" type="text/css" /-->
@@ -130,7 +131,7 @@
 						<!--li class="btnMain js-AddProduct1"> <a  class="optionMain js-btnProduct" style="color:white">Products</a></li-->
 						<li class="btnMain"> <a href="<?= RUTA_URL;?>/Paginas/login" class="optionMain js-btnCreateAcount1 btnLog" style="color:white">Iniciar sesion</a></li>
 						<li class="btnMain"> <a  href="<?= RUTA_URL;?>/Paginas/index" class="optionMain js-btnProductM" style="color:white">Productos</a></li>
-						<li class="btnMain"> <a href="<?= RUTA_URL;?>/UserController/closeSession" class="optionMain js-btnExit " style="color:white">Aserca de nosotros</a></li>
+						<li class="btnMain"> <a href="<?= RUTA_URL;?>/Paginas/about" class="optionMain js-btnAbout " style="color:white">Aserca de nosotros</a></li>
 						
 						<?php } ?>
 

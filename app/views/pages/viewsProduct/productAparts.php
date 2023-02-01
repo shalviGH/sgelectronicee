@@ -1,6 +1,20 @@
 <?php 
     require RUTA_APP.'/views/inc/header.php';  //print_r($data);
+
+
+   if(isset($data['productApart'])){
+        $productApart = $data['productApart'];
+
+        if(empty($productApart)){
+            echo "No hay datos";
+        }
+        else{
+            echo "se encontraron datos";
+        }
+    }
+    
 ?>
+
 
 
 <div class ="containerHome">
@@ -8,9 +22,10 @@
            
             <div class="contListImage" >
                  <?php 
+                   
                     
-                    foreach($data['productApart'] as $productA) : 
-                        
+                    foreach($productApart as $productA) : 
+
                 ?>
                     <div class="contImg js-contProductq" id="">
                         <div class="contImg js-contProductAs">
@@ -100,7 +115,7 @@
             <div class="bodyModal">
                 <form action="<?= RUTA_URL;?>/ProductController/deleteProductApart" method="POST" class="formModal js-formDelete">
                         <label id="js-inpNomPro" class="modalTitle">¡ alert !</label>
-                        <input type="text" id="js-idProUserAp2" class="js-codBarrai" name="idProUser"  >
+                        <input type="hidden" id="js-idProUserAp2" class="js-codBarrai" name="idProUser"  >
                         <label id="js-inpNomPro" class="msModal">Esta seguro de eliminar el Producto </label> 
                     
                     <div class="contBtnModal">

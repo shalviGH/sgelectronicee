@@ -53,6 +53,9 @@ $(document).ready(function() {
 		//('#js-btnApartUst').addClass('btnApart23');
 		//alert('la vista es '+viewPage); 
 	}
+	else if (viewPage == 'ProIndex' && viewPage2 == 'about') {
+		$('.js-btnAbout').addClass('btnMainSelected');
+	}
 
 	
 

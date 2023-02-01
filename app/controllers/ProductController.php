@@ -258,7 +258,8 @@
 				else 
 				{
 					
-					die('Ocurred a error');
+					echo "no hay productos apartados deberia agragar productos a la lista";
+					//$this->view('/pages/viewsProduct/productAparts', $data);
 				}
 			}
 			else
@@ -322,13 +323,17 @@
 					'nameProduct'=> trim($_POST['nameProduct']),
 				];
 
+				
+
 				//echo "El producto a buscar el ".$data['idProduct'];
 				if ($this->productModel->searchProduct($data)) 
 				{
 					$productSearch = $this->productModel->searchProduct($data);
+					$productImage = $this->productModel->getProductImage();
 
 					$data = [
 						'productFound' => $productSearch,
+						'productImage' => $productImage
 					];
 					//print_r($productSearch);
 

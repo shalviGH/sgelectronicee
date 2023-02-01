@@ -74,6 +74,18 @@
 			$this->view('pages/login', $data);
 		
 		}
+		public function about(){
+
+			$_SESSION['page'] = 'ProIndex';
+			$_SESSION['page2'] = 'about';
+
+			$data = [
+				'titulo' => 'home1',
+			];
+				
+			$this->view('pages/about', $data);
+		
+		}
 
 		
 		/*public function login(){

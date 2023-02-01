@@ -34,7 +34,7 @@
 ?>
 
 
-<div class="contElementd">
+<div class="contElements">
 <form action="<?= RUTA_URL;?>/UserController/login" method="POST" class="formLogin-Js formLogin js-login2" >
 	<!--form action="/Users/addUser" method="POST" class="formLogin-Js"-->
 		<div class="containerLogin">
