@@ -103,6 +103,8 @@
     justify-content: center;
     flex-wrap: wrap;
     justify-content: space-around;
+    background-color: red;
+    padding: 10px;
 }
 
 .contImg{
