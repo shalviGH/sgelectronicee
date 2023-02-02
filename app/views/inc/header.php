@@ -120,7 +120,7 @@
 							</a>
 
 							<div class="dropdown-menu optionList1 js-optionList" aria-labelledby="dropdownMenuLinkn0">
-								<a class="dropdown-itemq itemListBtn" href="<?= RUTA_URL;?>/ProductController/getProducts/">Todos LosProductos</a>
+								<a class="dropdown-itemq  itemListBtn" href="<?= RUTA_URL;?>/ProductController/getProducts/">Todos LosProductos</a>
 								<a class="dropdown-itemq itemListBtn" href="#">Mis Productos</a>
 								<a class="dropdown-itemq itemListBtn" href="<?= RUTA_URL;?>/ProductController/sistemApart/">Productos Apartados</a>
 							</div>

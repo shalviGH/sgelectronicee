@@ -24,11 +24,17 @@
     border-radius: 4px;
     width: 155px;
     margin-left: 0px;
+    background-color: none;
 }
 .btnSearchProduct{
     margin-top: -5px;
     width: 100px;
     height: 35px;
+}
+/*class for container product of view user */ /*class for container product of view user */
+/*class for container product of view user */ /*class for container product of view user */
+.containerProductForUser{
+    background-color: none;
 }
 
 .lblNameProduct{
@@ -85,18 +91,17 @@
 
 /*class  for container lis product*/
 .contListImage{
-    overflow-y: scroll;
     display: flex;
     height: 500px;
     margin-top: 10px;
-    padding-top: 10px;  
+    overflow-y: scroll;
+
 }
 .imgProduct{
     width: 340px;
     height: 290px;
 }
 .contListImage{
-    margin-top: 30px;
     width: 100%;
     display: flexbox;
     display: flex;
@@ -104,6 +109,8 @@
     justify-content: center;
     flex-wrap: wrap;
     justify-content: space-around;
+    overflow-y: auto;
+
 }
 
 .contImg{
@@ -376,7 +383,7 @@ table {
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
-        width: 30%;
+        width: 40%;
     }
     /* class btnfor search product*/
     .inpSearchP{
@@ -385,10 +392,9 @@ table {
         height: 30px;
         background-color: antiquewhite;
         border-radius: 4px;
-        width: 60%;
+        width: 200px;
         margin-left: 0px;
     }
-    
 
     /*class for content data productId*/
 .contDataProductId{

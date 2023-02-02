@@ -45,14 +45,18 @@
     align-items: center;
     justify-content: flex-end;
 }
+
+/*Style for icon for show list main in main menu*//*Style for icon for show list main in main menu*/
 .navbar-toggle{
-    background: hsla(334, 59%, 44%, 0.479);
+    background: hsla(320, 11%, 5%, 0.479);
 }
-/* Menu desplegable*/
+
+/*class forlis main Menu desplegable*//*class forlis main Menu desplegable*/
 .navbar-nav{
     /*width: 400px;*/
     width: 60%;
-    background: hsla(337, 91%, 13%, 0.479);
+    background: hsla(0, 3%, 8%, 0.9);
+    font-size: 18px;
     margin-top: 0px;
 }
 
@@ -62,6 +66,7 @@
 
 .btnMain:hover{
     background:rgba(0, 0, 0 , .5);
+    border-bottom: 2px solid rgba(252, 244, 244, 0.89);
 }
 /*.btnMainSelected{
     background:rgba(0, 0, 0 , .5);
@@ -110,7 +115,7 @@
     align-items: flex-start;
     justify-content: center;
     height: 120px;
-    background: hsla(281, 76%, 39%, 0.49);
+    background: hsla(0, 0%, 2%, 0.49);
 
 }
 
@@ -123,7 +128,7 @@
     text-indent: 5px;
     color: blanchedalmond;
     text-decoration: none;
-    background:  hsla(281, 76%, 39%, 0.49);
+    background:  hsla(300, 100%, 1%, 0.49);
 }
 
 .itemListBtn:hover{
@@ -140,7 +145,8 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    padding: 10px;
+    /*padding: 10px;*/
+    padding-top: 0px;
 }
 .headDoc{
     margin-left: 20px;

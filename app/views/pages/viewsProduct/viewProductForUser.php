@@ -1,5 +1,5 @@
 
-<div class ="containerHome js-contElementsProducto1">
+<div class ="containerHome containerProductForUser js-contElementsProducto1">
     
             <?php 
                 if(isset($data['product'])){
