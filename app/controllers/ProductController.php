@@ -329,6 +329,7 @@
 				if ($this->productModel->searchProduct($data)) 
 				{
 					$productSearch = $this->productModel->searchProduct($data);
+
 					$productImage = $this->productModel->getProductImage();
 
 					$data = [
@@ -353,7 +354,8 @@
 					{
 						//echo "La session del usario a desaparecido";
 
-						redirection('/index');
+						//redirection('/index', $data);
+						$this->view('/pages/productIndex', $data);
 					}
 					
 				}

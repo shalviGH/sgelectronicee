@@ -5,14 +5,32 @@
 
 ?>
 
+			<form method="POST" action="<?= RUTA_URL;?>/ProductController/searchProduct">
+				<div class="optionProduct">
+				
+					<div  class="contBtnAndSearch">
+						<button  class="btn btn-primary btnSearchProduct" >Buscar</button> 
+						<input type="text" name="nameProduct"  class="inpSearchP" placeholder="Nombre del producto" required/>
+						
+						<select class="form-select inpSearchP" aria-label="Default select example">
+							<option selected>Categorias</option>
+							<option value="1">Accesorio arduino electronica</option>
+							<option value="2">Accesorios laptops</option>
+							<option value="3">Accesoriios celulares</option>
+							<option value="4">Bocinas</option>
+							<option value="5">Relojes</option>
+						</select>
+
+					</div>
+				</div>
+			</form>
 
 
 
 
-
-    <?php
-        require RUTA_APP.'/views/pages/viewsProduct/viewProductForUser.php';  //print_r($data); 
-    ?>
+			<?php
+				require RUTA_APP.'/views/pages/viewsProduct/viewProductForUser.php';  //print_r($data); 
+			?>
 
 
 

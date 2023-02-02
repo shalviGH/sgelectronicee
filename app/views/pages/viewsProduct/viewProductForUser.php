@@ -7,6 +7,8 @@
                 }
                 if(isset($data['productFound'])) {
                     $op = $data['productFound'];
+
+                    //echo "la busqueda de producto existe";
                 }
            ?>
 

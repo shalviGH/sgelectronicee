@@ -9,25 +9,26 @@
 }
 /*container button and search*/
 .contBtnAndSearch{
+    height: 50px;
     display: flex;
-    flex-direction: column-reverse;
-    justify-content: space-between;
+    flex-direction: row;
+    justify-content: space-around;
     align-items: center;
-    width: 70%;
+    width: 95%;
 }
 
 /* class btn for search product*/
 .inpSearchP{
-    margin-top:20px;
     margin-bottom: 5px;
     height: 30px;
-    background-color: antiquewhite;
     border-radius: 4px;
-    width: 80%;
+    width: 155px;
     margin-left: 0px;
 }
 .btnSearchProduct{
-    width: 60%;
+    margin-top: -5px;
+    width: 100px;
+    height: 35px;
 }
 
 .lblNameProduct{
@@ -387,9 +388,7 @@ table {
         width: 60%;
         margin-left: 0px;
     }
-    .btnSearchProduct{
-        width: 35%;
-    }
+    
 
     /*class for content data productId*/
 .contDataProductId{
