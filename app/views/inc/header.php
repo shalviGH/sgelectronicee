@@ -114,8 +114,8 @@
 						<?php } ?>
 						
 						<?php if($view != "ProIndex"){ ?>
-						<div class="dropdown  btnContBtnList ">
-							<a class="dropdown-toggle btnMainList js-listBtn js-btnProduct" href="#" role="button" id="dropdownMenuLinkq" data-toggle="dropdownq" aria-haspopup="true" aria-expanded="false">
+						<div class="dropdown btnContBtnList ">
+							<a class="dropdown-toggle btnMainList btnProduct js-listBtn js-btnProduct " href="#" role="button" id="dropdownMenuLinkq" data-toggle="dropdownq" aria-haspopup="true" aria-expanded="false">
 								Productos
 							</a>
 

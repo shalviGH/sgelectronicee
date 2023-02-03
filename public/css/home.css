@@ -58,6 +58,7 @@
     background: hsla(0, 3%, 8%, 0.9);
     font-size: 18px;
     margin-top: 0px;
+    height: 400px;
 }
 
 .btnMain{
@@ -74,25 +75,36 @@
 
 /*container button for container button list*/
 .btnContBtnList{
-    display: flex;
-    flex-direction: column;
     height: 48px;
+    display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
+
 }
 /*class for button option*/
 .btnMainList{
-    font-size: 22px;
-    height: 100%;
-    width: 100%;
+    font-size: 18px;
     display: flex;
     align-items: center;
-    justify-content: center;
-    padding-left: 5px;
-    padding-right: 5px;
+    height: 100%;   
+    width: 100%;
     
+    /*display: flex;3
+    align-items: center;
+    justify-content: center;*/
+    /*padding-left: 5px;
+    padding-right: 5px;*/
     color: rgb(233, 228, 237);
     
+}
+
+/*classfor button productos*/
+.btnProduct{
+    margin-right: 10px;
+        font-size: 20px;
+        color: white;
+        margin-right: 5px;
+
 }
 
 .btnMainList:hover{
@@ -103,23 +115,26 @@
 
 /*class for conttainer list in to the button*/
 .optionList1{
-    height: 100%;
+    height: 230px;
     align-items: center;
+    background-color: red;
     
 }
 
+/*class for container contain option list products*/
 .optionList{
-    margin-top: 10px;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    height: 120px;
-    background: hsla(0, 0%, 2%, 0.49);
+    height: 200px;
+    width: 100%;
+    background-color: rgb(0, 0, 0, .9);
+    padding-bottom: 0px;
+    /*background: hsla(0, 0%, 2%, 0.49);*/
 
 }
 
 .itemListBtn{
+    margin-top: 5px;
     height: 40px;
     width: 100%;
     text-align: justify;
@@ -131,9 +146,11 @@
     background:  hsla(300, 100%, 1%, 0.49);
 }
 
+
 .itemListBtn:hover{
     background:rgba(0, 0, 0 , .5);
     color: rgb(233, 228, 237);
+    border-bottom: 2px solid  rgb(233, 228, 237);;
     text-decoration: none;
 }
 
@@ -175,7 +192,7 @@
     flex-direction: column;
     justify-content: center;
     width: 90%;
-    height: 200px;
+    height: 250px;
     border: 3px;
     background: rgba(93, 28, 125, .200);
     border-radius: 5%;
@@ -218,10 +235,12 @@
     display: none;
     /*background: hwb(240 7% 87% / 0.849);*/
 }
+
 .lblWelcome{
     width: 100%;
     color: white;
 }
+
 .imgUser{
     width: 70px;
     height: 70px;
@@ -229,7 +248,8 @@
 
 .contElement{
     width: 100%;
-    height: 460px;
+    height: 460px;  
+    padding: 10px;
     /*padding: 5px;*/
     display: flex;
     flex-direction: column;
@@ -315,6 +335,7 @@
 }
 
 .btnMainSelected{
+    height: 40px;
     background:rgba(0, 0, 0 , .5);
     border-radius: 2px;
     border-bottom: 2px solid white;
@@ -326,7 +347,7 @@
 /*SLIDE  FOTOS HOME*/
 .contSlider{
     padding: 10px;
-    height: 350px;
+    height: 500px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -335,24 +356,28 @@
 
 .slider {
     
-	width: 90%;
+	width: 100%;
 	margin: auto;
 	overflow: hidden;
-    height: 90%;
+    height: 100%;
 }
 
 .slider ul {
 	display: flex;
 	padding: 0;
 	width: 400%;
+    padding: 10px;
 	
 	animation: cambio 20s infinite alternate linear;
 }
 
+/*container for change the height and width of the image of home*/
 .slider li {
 	width: 100%;
+    height: 500px;
 	list-style: none;
 }
+
 
 .slider img {
 	width: 100%;
@@ -389,7 +414,6 @@
         display: flex;
         align-items: center;
         justify-content: flex-end;
-        
     }
 
     
@@ -418,10 +442,13 @@
        /* background: rgb(140, 132, 148);*/
         border-bottom: 2px solid white;
     }
+    /*class forlis main Menu desplegable*//*class forlis main Menu desplegable*/
+
 
     /*Container button main*/
     .navbar-nav{
         width: 100%;
+        height: 45px;
         margin-right: 5px;
         margin-left: 10px;
         display: flex;

@@ -17,6 +17,7 @@
     width: 95%;
 }
 
+
 /* class btn for search product*/
 .inpSearchP{
     margin-bottom: 5px;
@@ -92,7 +93,7 @@
 /*class  for container lis product*/
 .contListImage{
     display: flex;
-    height: 500px;
+    height: 470px;
     margin-top: 10px;
     overflow-y: scroll;
 
@@ -109,7 +110,7 @@
     justify-content: center;
     flex-wrap: wrap;
     justify-content: space-around;
-    overflow-y: auto;
+    /*overflow-y: auto;*/
 
 }
 
@@ -435,6 +436,7 @@ table {
         margin-top: 5px;
         height: 400px;
         margin-bottom: 25px;
+        overflow-y: scroll;
     }
 
 
