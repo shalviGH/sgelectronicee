@@ -119,7 +119,8 @@
                         'namePro' => trim($_POST['namePro']),
                         'descPro' => trim($_POST['descPro']),
 						'pricePro' => trim($_POST['pricePro']),
-                        'amountPro' => trim($_POST['amount']),
+                        'category' => trim($_POST['category']),
+						'amountPro' => trim($_POST['amount']),
                         'imageProduct' => $nombreImage,
                     ];	
 
@@ -167,6 +168,10 @@
 				$nombreImage3= $_FILES['photo3']['name'];
 				$tipoImage3 = $_FILES['photo3']['type'];
 				$tam_iamge3 = $_FILES['photo3']['size'];
+
+				$nombreImage4= $_FILES['photo4']['name'];
+				$tipoImage4 = $_FILES['photo4']['type'];
+				$tam_iamge4 = $_FILES['photo4']['size'];
 				//Ruta de la carpeta del servidor
 
 				$carpetaDestino = $_SERVER['DOCUMENT_ROOT'] . RUTA_IMG ;
@@ -174,6 +179,7 @@
 				move_uploaded_file($_FILES['photo1']['tmp_name'], $carpetaDestino.$nombreImage1 );
 				move_uploaded_file($_FILES['photo2']['tmp_name'], $carpetaDestino.$nombreImage2 );
 				move_uploaded_file($_FILES['photo3']['tmp_name'], $carpetaDestino.$nombreImage3 );
+				move_uploaded_file($_FILES['photo4']['tmp_name'], $carpetaDestino.$nombreImage4 );
 
 				//$imgContent = addslashes(file_get_contents($_FILES['foto']['tmp_name']));
 					
@@ -182,6 +188,7 @@
                         'img1' => $nombreImage1,
                         'img2' => $nombreImage2,
                         'img3' => $nombreImage3,
+						'img4' => $nombreImage4,
                     ];	
 
 					//print_r($data);
@@ -291,16 +298,11 @@
 					'precioTotal' => $precioTotal,
 					'idU' => $idUser,
 				];
-				
-				//print_r($data);
-				
 
 				if ($this->productModel->productSale($data)) {
-					
 					//$this->view('/pages/productView');
 					redirection('/productController/getProducts/', $data['idProduct']);
 					//redirection('/pages/productView');
-					
 				}
 				else {
 					die('Ocurred a error');
@@ -314,29 +316,68 @@
 			
 		}
 
-		public function searchProduct()
+		public function searchProduct($idCategory)
 		{
-			if($_SERVER['REQUEST_METHOD'] == 'POST')
-			{
-				
+			
+				if($_SERVER['REQUEST_METHOD'] == 'POST')
+				{
+					$data = [
+						'nameProduct'=> trim($_POST['nameProduct']),
+						'category'=> $idCategory,
+					];
+					//echo "El producto a buscar el ".$data['idProduct'];
+					if ($this->productModel->searchProduct($data)) 
+					{
+						$productSearch = $this->productModel->searchProduct($data);
+						$productImage = $this->productModel->getProductImage();
+
+						$data = [
+							'productFound' => $productSearch,
+							'productImage' => $productImage
+						];
+						//print_r($productSearch);
+						if(isset($_SESSION['datos']["idUser"]))
+						{
+							$_SESSION['CRUD'] = "search";
+							$tipoUser = $_SESSION['datos']["tipoUser"];
+
+							if($tipoUser == 2){
+								$this->view('/pages/vUser', $data);
+							}else{
+							//$this->view('/pages/productView', $data);
+								$this->view('/pages/vAdmin', $data);
+							}
+						}
+						else
+						{
+							//redirection('/index', $data);
+							$this->view('/pages/productIndex', $data);
+						}
+					}
+					else 
+					{
+						echo "no se encontraron resultados";
+						redirection('/productController/getProducts');
+					}
+				}
+			
+			elseif($idCategory != 0){
+				//redirection('/Paginas/index');
 				$data = [
-					'nameProduct'=> trim($_POST['nameProduct']),
+					'category'=> $idCategory,
+					'nameProduct'=> "desc",
 				];
-
-				
-
-				//echo "El producto a buscar el ".$data['idProduct'];
 				if ($this->productModel->searchProduct($data)) 
 				{
 					$productSearch = $this->productModel->searchProduct($data);
-
 					$productImage = $this->productModel->getProductImage();
 
 					$data = [
 						'productFound' => $productSearch,
 						'productImage' => $productImage
 					];
-					//print_r($productSearch);
+
+					//$this->view('/pages/productIndex', $data);
 
 					if(isset($_SESSION['datos']["idUser"]))
 					{
@@ -344,36 +385,33 @@
 						$tipoUser = $_SESSION['datos']["tipoUser"];
 
 						if($tipoUser == 2){
-							$this->view('/pages/vUser', $data);
-						}else{
+								$this->view('/pages/vUser', $data);
+						}elseif($tipoUser == 1){
 						//$this->view('/pages/productView', $data);
 							$this->view('/pages/vAdmin', $data);
+						}
+						else{
+							redirection('/Paginas/index', $data);
 						}
 					}
 					else
 					{
-						//echo "La session del usario a desaparecido";
-
-						//redirection('/index', $data);
+						//redirection('/Paginas/index', $data);
 						$this->view('/pages/productIndex', $data);
 					}
-					
 				}
-				else {
-					//die('Ocurred a error dee');
-					echo "no se encontraron resultados";
-					//si no encuentyra los productos lo redireccionamos 
-					//a la vista principal de productos
-					redirection('/productController/getProducts');
-				}
-			}
-
-			else{
-				echo "No se recivieron datos";
-			}
 			
+			}
+		
 		}
 
+
+
+
+
+		/*Function for update product *//*Function for update product *//*Function for update product */
+		/*Function for update product *//*Function for update product *//*Function for update product */
+		/*Function for update product *//*Function for update product *//*Function for update product */
 		public function updateProduct()
 		{
 			echo "Provando funcion update";
@@ -432,6 +470,11 @@
 			
 		}
 
+
+
+		/* Function for delete product *//* Function for delete product */
+		/* Function for delete product *//* Function for delete product */
+		/* Function for delete product *//* Function for delete product */
 		public function deleteProduct(){
 			
 			$data = [

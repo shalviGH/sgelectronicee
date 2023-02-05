@@ -4,12 +4,23 @@
 }
 
 body{
-    background: rgba(233, 233, 238, 0.809);
-    
+   /* background: rgba(64, 64, 216, 0.809);*/
+   /* background-image: url("../public/images/fontLog.jpg");
+    height: 100vh;
+    width: 100%;
+    /*background-repeat:unset;s
+    background-repeat:no-repeat;
+   
+
+   /* background: linear-gradient(80deg, #33339b, #4e8cd4);*/
+   /*background-color: rgba(3, 4, 53, 0.787);*/
+   background-image: radial-gradient(circle at 45.97% 55.76%, #020252 0, #080d6f 25%, #0f0044 50%, #000033 75%, #000027 100%);
+   background-repeat:no-repeat; 
+   height: 100vh;
 }
 
 .containerLogin{
-    background-color: #131212;
+    background-color: rgb(0, 0, 0, .8);
     display: flex;
     flex-direction: row;
     align-content: space-around;
@@ -24,23 +35,45 @@ body{
 .formLogin{
     padding: 20px;
     margin-top: 80px;
+
 }
 
 .contImgLogin{
     /*background: hsla(268, 86%, 44%, 0.809);*/
-    width: 40%;
+    width: 38%;
     height: 100%;
-    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     margin-right: 5px;
     display: flex;
     align-content: center;
+    padding-left: 5px;
 }
 .imgLogin{
-    width: 100%;
+    width: 90%;
     height: 120px;
 }
+.lblNameE{
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    font-size: 15px;
+    margin-top: -10px;
+    margin-bottom: 0px;
+}
+.lblSlogan{
+    color: #fff;
+    font-size: 8px;
+    text-align: center;
+    width: 100%;
+}
+
+
+
 .contDataLogin{
-    background-color: rgb(16, 16, 19);
+    background-color: none;
     display: flex;
     width: 60%;
     height: 100%;
@@ -53,7 +86,7 @@ body{
 .contGreeting{
     margin-bottom: 0px;
     margin-top: 10px;
-    height: 50px;
+    height: 30px;
 
     display: flex;
     flex-direction: column;
@@ -63,7 +96,7 @@ body{
     font-weight: bold;
 }
 .conTxtLogo{
-    background-color: rgb(16, 16, 19);
+    background-color: none;
     display: flex;
     flex-direction: column;
     margin-left: 20px;
@@ -80,7 +113,7 @@ body{
     border-bottom:2px solid hsla(0, 0%, 100%, 0.809);
     margin-bottom: 8px;
     color: #f1edf5;
-    height: 30px;
+    height: 25px;
 }
 
 .contLoYorAcount{
@@ -98,19 +131,44 @@ body{
 
 .btnLogIn{
     background: hsla(264, 11%, 91%, 0.809);
-    width: 80px;
+    width: 100px;
     height: 30px;
-    border-radius: 10%;
+    border-radius: 5px;
     margin-left: 60px;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
+
+.btnLogIn:hover{
+    background-color: #383636;
+    color: #f1edf5;
+}
+
+
+
+.txtUserLog{
+    margin-bottom: 20px;
+}
+
 .lblCaccount{
     margin-top: 5px;
     margin-left: 60px;
+    font-size: 18px;
+}
+
+.lblCaccount:hover{
+    font-size: 19px;
 }
 
 .lblL{
     font-weight: initial;
 }
+
+.lblT{
+    font-size: 15px;
+}
+
+
 
 
 /*class fro te footer*//*class fro te footer*/
@@ -212,6 +270,6 @@ body{
 
     .imgLogin{
         width: 60%;
-        height: 210px;
+        height: 150px;
     }
 }

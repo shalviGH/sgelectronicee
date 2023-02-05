@@ -34,31 +34,33 @@
 ?>
 
 
-<div class="contElements">
+<div class="contElementsw contLogin">
 <form action="<?= RUTA_URL;?>/UserController/login" method="POST" class="formLogin-Js formLogin js-login2" >
 	<!--form action="/Users/addUser" method="POST" class="formLogin-Js"-->
 		<div class="containerLogin">
 			<div class="contImgLogin">
-				<img src="<?= RUTA_URL; ?>/public/images/logoApp.png" class="imgLogin">
+				<img src="<?= RUTA_URL; ?>/public/images/robotLog2.png" class="imgLogin">
+				<label class="lblNameE">Electronica García</label>
+				<label class="lblSlogan">Todo empieza en la imaginación</label>
 			</div>
 			<div class="contDataLogin loginEnter-js">
 				<div class = "contGreeting">
-					<div><lavel class="lblLog">Hello</label></div>
-					<div><lavel class="lblLog lblM">Bienvenido</label></div>
+					<!--div><lavel class="lblLog">Hello</label></div-->
+					<!--div--><label class="lblLog lblM">Bienvenido</label><!--/div-->
 				</div>
 				<div class="contLoYorAcount">
-					<label class="lblLog lblL" >Login your account</label>
+					<label class="lblLog lblL lblT" >Login your account</label>
 				</div>
 				<div class="conTxtLogo">
 					<label class="lblLog lblL">Username</label>
-					<input type="text" name="user" class="txtLogin">
+					<input type="text" name="user" class="txtLogin txtUserLog">
 					<label class="lblLog lblL">Password</label>
 					<input type="password" name="pwd" class="txtLogin">
 				</div>
 
-				<div class="contForgotPass">
+				<!--div class="contForgotPass">
 					<label class="lblLog lblL" >Forgot password?</label>
-				</div>
+				</div-->
 				<input type="submit" value="Enter"  class="btnLogIn">
 				<label class="lblLog lblCaccount lblL lblCreateAcount-js" >Create account</label>
 			</div>
@@ -69,7 +71,7 @@
 					<div><lavel class="lblLog lblM">Good Morning</label></div>
 				</div>
 				<div class="contLoYorAcount">
-					<label class="lblLog lblL" >Create account</label>
+					<label class="lblLog lblL lblCreateAcount" >Create account</label>
 				</div>
 				<div class="conTxtLogo">
 					<!--label class="lblLog lblL">Name</label>

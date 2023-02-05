@@ -12,13 +12,21 @@
 
 
     <!--Container of elements of the view elements--> 
-    <form method="POST" action="<?= RUTA_URL;?>/ProductController/searchProduct">
+    <form method="POST" action="<?= RUTA_URL;?>/ProductController/searchProduct/0">
         <div class="optionProduct">
             <button  class="btn btn-primary js-AddProduct">Agregar Producto</button>
-            <div  class="contBtnAndSearch">
-                <button  class="btn btn-primary btnSearchProduct" >Buscar producto</button> 
-                <input type="text" name="nameProduct"  class="inpSearchP " placeholde="Buscar producto" required/>
-            </div>
+            <div  class="contBtnAndSearchbbb">
+            <button  class="btn btn-primary btnSearchProduct" >Buscar</button> 
+            <input type="text" name="nameProduct"  class="inpSearchP" placeholder="Busca un producto" required/>
+            <select class="form-select inpSearchP"  aria-label="Default select example">
+                <option selected>Categorias</option>
+                <option value="1" class="js-category">Electronica</option>
+                <option value="2" class="js-category">Audio</option>
+                <option value="3" class="js-category">Computo</option>
+                <option value="4" class="js-category">Hogar</option>
+                <option value="5" class="js-category">Gamer</option>
+            </select>
+        </div>
         </div>
     </form>
 
@@ -156,6 +164,10 @@
                         <label>Imagen 3:</label>
                         <input type="file"  name="photo3" multiple  required id="nuestroinput"/>
                     </div>
+                    <div class="dataP">
+                        <label>Imagen 4:</label>
+                        <input type="file"  name="photo4" multiple  required id="nuestroinput"/>
+                    </div>
                 
                 <div class="dataP contBtnModal  contBtnModalAI">
                     <input type="submit" value="Aceptar" class="btn btn-primary" required/>
@@ -176,56 +188,6 @@
         require RUTA_APP.'/views/pages/viewsProduct/crudProduct.php';  //print_r($data); 
     ?>
 
-
-                            
-    <!--div id="modalAgregarProducto"  class="modal fade" role="dialog" style="">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <Modal heade>
-                <div class="modal-header" style="background:#3c8dbc; color:white">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title"> Agregar Imagen</h4>
-                </div>
-                <Body modal>
-                <div class="modal-body">
-                    <div class="box-body">
-                        <Etry for the title>
-                        <div class="form-group">
-                            <div class="input-group">
-                                <span class="input-group-addon"><i class="fa fa-product-hunt">P</i></span>
-                                <input type="text" class="form-control input-lg validarProducto tituloProducto" placeholder="ingresar titulo del producto">
-                            </div>
-
-                        </div>
-                    </div>
-
-
-                    <Entarada para agregar multimedia-->
-                    <!--div class="form-group agregarMultimedia" style="display:none">
-                        <span class="input-group-addon"><i class="fa fa-youtobe-play"></i></span>
-                        <input type="text" class="form-control input-lg multimedia" placeholder="ingresar codigo video youtobe">
-
-                    </div-->
-
-                    <!--Subir multimedi a de producto fisico>
-                    <div class="multimediaFisica needsclick dz-clickable">
-                        <div class="dz-message needsclick">
-                            Arrastrar o dar click para subir imagenes
-                        </div>
-
-                    </div>
-                </div-->
-                 <!-- footer modal---> 
-                <!--div class="modal-footer">
-                    <button type="button" class="guardarProducto btn btn-default pull-left" data-dismiss="modal">Salir</button>
-
-                    <button type="button" class="guardarProducto btn btn-primary"> guardar Producto</button>
-                </div>
-            </div>
-           
-        </idv>
-       
-    </div-->
 
 
 
@@ -302,12 +264,25 @@
                     <input type="text" name="amount" required />
                 </div>
                 <div class="dataP">
+                    <label>Categoria:</label>
+                    <select class="form-select inpSearchP4" name="category">
+                        <option value="1">Electronica</option>
+                        <option value="2">Audio</option>
+                        <option value="3">Computo</option>
+                        <option value="4">Hogar</option>
+                        <option value="5">Gamer</option>
+                    </select>
+                </div>
+
+
+
+                <div class="dataP">
                     <label>Imagen:</label>
                     <input type="file"  name="photo" multiple  required/>
                 </div>
-                <div class="dataP contBtnAddP">
-                    <input type="submit" value="Agregar" class="btnAddP" required/>
-                    <i class="btnAddP btnpCancel js-btnCancel bnt">Cancel</i>
+                <div class="dataP contBtnModal">
+                    <input type="submit" value="Agregar" class="btn btn-primary" required/>
+                    <i class="btn btn-danger js-btnCancel">Cancel</i>
                 </div>
             </form>
         </div>

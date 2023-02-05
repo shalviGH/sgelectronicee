@@ -29,8 +29,8 @@
 
 		public function addProduct($data)
 		{
-			$this->db->query('INSERT INTO producto (codBarra, nameProduct, descrip, price, amount, image) 
-            VALUES (:codBarra, :namePro, :descPro, :pricePro, :amountPro, :imageProduct)' );
+			$this->db->query('INSERT INTO producto (codBarra, nameProduct, descrip, price, amount, category,image) 
+            VALUES (:codBarra, :namePro, :descPro, :pricePro, :amountPro, :category,  :imageProduct)' );
 
 			//vinculara valores
 			$this->db->bind(':codBarra', $data['codBarra']);
@@ -38,6 +38,7 @@
             $this->db->bind(':descPro', $data['descPro']);
 			$this->db->bind(':pricePro', $data['pricePro']);
             $this->db->bind(':amountPro', $data['amountPro']);
+			$this->db->bind(':category', $data['category']);
 			$this->db->bind(':imageProduct', $data['imageProduct']);
 
 
@@ -53,16 +54,18 @@
 
 		}
 
+		
 		public function addImageP($data)
 		{
 			$this->db->query('INSERT INTO image (nombreImg, idProducto)
-            VALUES (:img1, :codBarra),(:img2, :codBarra),(:img3, :codBarra)' );
+            VALUES (:img1, :codBarra),(:img2, :codBarra),(:img3, :codBarra), (:img4, :codBarra)' );
 
 			//vinculara valores
 			$this->db->bind(':codBarra', $data['codBarra']);
 			$this->db->bind(':img1', $data['img1']);
 			$this->db->bind(':img2', $data['img2']);
 			$this->db->bind(':img3', $data['img3']);
+			$this->db->bind(':img4', $data['img4']);
             //$this->db->bind(':img2', $data['img2']);
 			//$this->db->bind(':img3', $data['img3']);
 
@@ -145,17 +148,28 @@
 
 		public function searchProduct($data)
 		{
-			$this->db->query('SELECT * FROM producto 
-			WHERE producto.nameProduct  LIKE  "%":nameProduct"%" ');
-			
-			//vincular values
-			$this->db->bind(':nameProduct', $data['nameProduct']);
+			if($data['category'] == 0 )
+			{
+				$this->db->query('SELECT * FROM producto 
+				WHERE producto.nameProduct  LIKE  "%":nameProduct"%" ');
+				
+				$this->db->bind(':nameProduct', $data['nameProduct']);
+			}
+			else{
+				$this->db->query('SELECT * FROM producto 
+								WHERE producto.category  LIKE  "%":idCategory"%" ');
+				
+				$this->db->bind(':idCategory',$data['category']);
+			}
 
-			/*//echo "SE recibio el dato ". $data['nameProduct'];*/
 			$result = $this->db->getRegisters();
 
 			return $result; 
 		}
+
+
+		//function for update product------------------function for update product------------------
+		//function for update product------------------function for update product------------------
 
 		public function updateProductM($data)
 		{

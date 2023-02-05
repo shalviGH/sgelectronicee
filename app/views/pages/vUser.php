@@ -2,22 +2,26 @@
     require RUTA_APP.'/views/inc/header.php';  //print_r($data);
 ?>
 
-    <!--Container of elements of the view elements--> 
-    <form method="POST" action="<?= RUTA_URL;?>/ProductController/searchProduct">
-        <div class="optionProduct">
-           
-            <div  class="contBtnAndSearch">
-                <button  class="btn btn-primary btnSearchProduct" >Buscar producto</button> 
-                <input type="text" name="nameProduct"  class="inpSearchP " placeholde="Buscar producto" required/>
-            </div>
+<form method="POST" action="<?= RUTA_URL;?>/ProductController/searchProduct/0">
+    <div class="optionProduct">
+
+        <div  class="contBtnAndSearchbbb">
+            <button  class="btn btn-primary btnSearchProduct" >Buscar</button> 
+            <input type="text" name="nameProduct"  class="inpSearchP" placeholder="Busca un producto" required/>
+            <select class="form-select inpSearchP"  aria-label="Default select example">
+                <option selected>Categorias</option>
+                <option value="1" class="js-category">Electronica</option>
+                <option value="2" class="js-category">Audio</option>
+                <option value="3" class="js-category">Computo</option>
+                <option value="4" class="js-category">Hogar</option>
+                <option value="5" class="js-category">Gamer</option>
+            </select>
         </div>
-    </form>
+    </div>
+</form>
 
     <?php 
-        /*if (isset($_SESSION['CRUD'])) 
-        {
-            echo "La session crud existe ". $_SESSION['CRUD'] ;
-        }*/
+       
     ?>
 
     <!--div class="alert alert-warning alert-dismissable msAlert">
@@ -26,20 +30,17 @@
     </div-->
 
 
-
     <?php
         require RUTA_APP.'/views/pages/viewsProduct/viewProductForUser.php';  //print_r($data); 
     ?>
-
-
-
-
-
-        
-    <!--view form apart product-->   <!--view form apart product-->   <!--view form apart product-->
-    <!--view form apart product-->   <!--view form apart product-->   <!--view form apart product-->
+    
     
 
+
+
+
+    <!--view form apart product-->   <!--view form apart product-->   <!--view form apart product-->
+    <!--view form apart product-->   <!--view form apart product-->   <!--view form apart product-->
 
 <div class="modal js-ModalUpdateApart">
         <div class="bodyModal ">

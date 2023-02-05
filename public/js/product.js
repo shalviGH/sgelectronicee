@@ -305,7 +305,15 @@ $(document).ready(function(){
         $('.js-ModalDeleteProductApart').hide();
     });
 
-    
+
+    /* function for show the produt for category*//* function for show the produt for category*/
+    /* function for show the produt for category*//* function for show the produt for category*/
+    /* function for show the produt for category*//* function for show the produt for category*/
+    $('.js-category').on('click' ,function(){
+
+           $category = $(this).val();
+           $(location).attr('href',rutaUrl + "/productController/searchProduct/"+$category);
+    });
     
 
 });

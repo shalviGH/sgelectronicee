@@ -295,8 +295,10 @@ table {
     
 }
 .tColumn1{
-    text-align: center;
+    text-align: center;     
     border: 1px solid rgb(248, 243, 243);
+    color: white;
+    font-size: 15px;
 }
 
 .colDataT{
@@ -323,6 +325,7 @@ table {
     align-items: center;
     justify-content: center;
     height: 115px;
+    color: white;
 }
 .divTblOptions{
     display: flex;
@@ -340,7 +343,7 @@ table {
     width: 150px;
     margin-top: 5px;
     height: 20px;
-    color: blue;
+    color: rgb(198, 198, 211);
     background-color: none;
 }
 
