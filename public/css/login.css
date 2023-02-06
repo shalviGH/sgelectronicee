@@ -27,14 +27,16 @@ body{
     align-items: center;
     border-radius:5%;
 
-    width: 90%;
+    width: 98%;
     margin: auto;
     margin-top: 10px;
 }
 
+
 .formLogin{
     padding: 20px;
     margin-top: 80px;
+    background-color: red;
 
 }
 
