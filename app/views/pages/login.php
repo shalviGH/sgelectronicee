@@ -46,7 +46,7 @@
 			<div class="contDataLogin loginEnter-js">
 				<div class = "contGreeting">
 					<!--div><lavel class="lblLog">Hello</label></div-->
-					<!--div--><label class="lblLog lblM">Bienvenido</label><!--/div-->
+					<!--div--><!--label class="lblLog lblM">Bienvenido</label--><!--/div-->
 				</div>
 				<div class="contLoYorAcount">
 					<label class="lblLog lblL lblT" >Login your account</label>
@@ -85,10 +85,10 @@
 			<div class="contDataLogin contDataRegister-js" >
 				<div class = "contGreeting">
 					<div><lavel class="lblLog"></label></div>
-					<div><lavel class="lblLog lblM">Good Morning</label></div>
+					<div><lavel class="lblLog lblM"></label></div>
 				</div>
 				<div class="contLoYorAcount">
-					<label class="lblLog lblL lblCreateAcount" >Create account</label>
+					<label class="lblLog lblL lblT">Create account</label>
 				</div>
 				<div class="conTxtLogo">
 					<!--label class="lblLog lblL">Name</label>
