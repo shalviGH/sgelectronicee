@@ -61,8 +61,19 @@
 				<!--div class="contForgotPass">
 					<label class="lblLog lblL" >Forgot password?</label>
 				</div-->
-				<input type="submit" value="Enter"  class="btnLogIn">
-				<label class="lblLog lblCaccount lblL lblCreateAcount-js" >Create account</label>
+				
+				<!--label class="lblLog lblCaccount lblL lblCreateAcount-js" >Create account</label-->
+					<div class="contBtnLogin">
+						<input type="submit" value="Enter"  class="btn btn-primary">
+						<a class="btnAnimate btnLogoCreate lblCreateAcount-js">
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							Register
+						</a>
+					</div>
+				
 			</div>
 
 			<div class="contDataLogin contDataRegister-js" >
@@ -98,7 +109,17 @@
 
 				
 				<input type="submit" value="Send"  class="btnLogIn">
-				<label class="lblLog lblCaccount lblLoginI-js" >Login</label>
+				<!--label class="lblLog lblCaccount lblLoginI-js" >Login</label-->
+
+				<div class="coon">
+					<a class="btnAnimate lblLoginI-js">
+						<span></span>
+						<span></span>
+						<span></span>
+						<span></span>
+						Login
+					</a>
+				</div>
 			</div>
 			
 		</div>

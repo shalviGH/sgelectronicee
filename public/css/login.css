@@ -130,6 +130,16 @@ body{
     margin-bottom: 5px;
 }
 
+.contBtnLogin{
+    height: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+
 .btnLogIn{
     background: hsla(264, 11%, 91%, 0.809);
     width: 100px;
@@ -143,6 +153,10 @@ body{
 .btnLogIn:hover{
     background-color: #383636;
     color: #f1edf5;
+}
+
+.btblog{
+    background-color: red;
 }
 
 

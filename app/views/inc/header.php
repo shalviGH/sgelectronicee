@@ -13,6 +13,7 @@
 		<link rel="stylesheet" type="text/css" href="<?php echo RUTA_URL?>/css/product.css">
 		<link rel="stylesheet" type="text/css" href="<?php echo RUTA_URL?>/css/modal.css">
 		<link rel="stylesheet" type="text/css" href="<?php echo RUTA_URL?>/css/about.css">
+		<link rel="stylesheet" type="text/css" href="<?php echo RUTA_URL?>/css/buttonAnimate.css">
 		<link rel="stylesheet" type="text/css" href="<?php echo RUTA_URL?>/css/dropzone.css">
 
 		<!--link href="https://unpkg.com/dropzone@6.0.0-beta.1/dist/dropzone.css" rel="stylesheet" type="text/css" /-->

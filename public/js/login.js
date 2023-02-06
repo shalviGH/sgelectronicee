@@ -14,7 +14,8 @@ $(document).ready(function(){
     $('.lblCreateAcount-js').on('click', function(){
         $('.loginEnter-js').hide();
         $('.contDataRegister-js').show();
-        $('.formLogin-Js').attr("action", rutaUrl+"/UserController/addUser"); 
+        $('.formLogin-Js').attr("action", rutaUrl+"/UserController/addUser");
+       
     });
 
     $('.lblLoginI-js').on('click', function(){

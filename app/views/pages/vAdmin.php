@@ -14,7 +14,7 @@
     <!--Container of elements of the view elements--> 
     <form method="POST" action="<?= RUTA_URL;?>/ProductController/searchProduct/0">
         <div class="optionProduct">
-            <button  class="btn btn-primary js-AddProduct">Agregar Producto</button>
+           
             <div  class="contBtnAndSearchbbb">
             <button  class="btn btn-primary btnSearchProduct" >Buscar</button> 
             <input type="text" name="nameProduct"  class="inpSearchP" placeholder="Busca un producto" required/>
@@ -29,6 +29,16 @@
         </div>
         </div>
     </form>
+    <div class="contBtnAddproduct">
+        <!--button  class="btn btn-primary js-AddProduct">Agregar Producto</button-->
+        <a href="#" class="btnAnimate js-AddProduct">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Add product
+        </a>
+    </div>
 
     <?php 
         if (isset($_SESSION['CRUD'])) 
