@@ -20,7 +20,8 @@ body{
 }
 
 .containerLogin{
-    background-color: rgb(0, 0, 0, .8);
+    /*background-color: rgb(0, 0, 0, .8);*/
+    background-color: #f1edf5;
     display: flex;
     flex-direction: row;
     align-content: space-around;
@@ -40,7 +41,7 @@ body{
 }
 
 .contImgLogin{
-    /*background: hsla(268, 86%, 44%, 0.809);*/
+    /*background: rgba(0, 0, 0, 0.80);*/
     width: 38%;
     height: 100%;
     display: flex;
@@ -57,7 +58,7 @@ body{
     height: 120px;
 }
 .lblNameE{
-    color: #fff;
+    color: #1d1b1b;
     text-align: center;
     width: 100%;
     font-size: 15px;
@@ -65,7 +66,7 @@ body{
     margin-bottom: 0px;
 }
 .lblSlogan{
-    color: #fff;
+    color: #020202;
     font-size: 8px;
     text-align: center;
     width: 100%;
@@ -104,7 +105,7 @@ body{
 }
 
 .lblLog{
-    color:hsl(0, 0%, 98%);
+    color:hsl(0, 0%, 5%);
     background-color: none; 
 }
 
@@ -113,7 +114,7 @@ body{
     background: none;
     border-bottom:2px solid hsla(204, 71%, 43%, 0.809);
     margin-bottom: 8px;
-    color: #f1edf5;
+    color: #0c0c0c;
     height: 25px;
 }
 
@@ -154,7 +155,7 @@ body{
 
 .btnLogIn:hover{
     background-color: #383636;
-    color: #f1edf5;
+    color: #0c0c0c;
 }
 
 .btblog{
