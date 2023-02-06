@@ -64,7 +64,13 @@
 				
 				<!--label class="lblLog lblCaccount lblL lblCreateAcount-js" >Create account</label-->
 					<div class="contBtnLogin">
-						<input type="submit" value="Enter"  class="btn btn-primary">
+						<button type="submit" value="Enter"  class="btnAnimate btnLogSendData2 btnLogoCreate">
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>Enter
+						</button>
+
 						<a class="btnAnimate btnLogoCreate lblCreateAcount-js">
 							<span></span>
 							<span></span>
@@ -108,11 +114,18 @@
 				</div>
 
 				
-				<input type="submit" value="Send"  class="btnLogIn">
+				<!--input type="submit" value="Send"  class="btnLogIn"-->
 				<!--label class="lblLog lblCaccount lblLoginI-js" >Login</label-->
 
-				<div class="coon">
-					<a class="btnAnimate lblLoginI-js">
+				<div class="contBtnLogin">
+					<button type="submit" class="btnAnimate btnLogSendData2 btnLogoCreate">
+						<span></span>
+						<span></span>
+						<span></span>
+						<span></span>Register
+					</button>
+
+					<a class="btnAnimate btnLogoCreate lblLoginI-js">
 						<span></span>
 						<span></span>
 						<span></span>

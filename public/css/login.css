@@ -111,7 +111,7 @@ body{
 .txtLogin{
     border: 0px solid  #f1edf5;
     background: none;
-    border-bottom:2px solid hsla(0, 0%, 100%, 0.809);
+    border-bottom:2px solid hsla(204, 71%, 43%, 0.809);
     margin-bottom: 8px;
     color: #f1edf5;
     height: 25px;
@@ -137,6 +137,8 @@ body{
     align-items: center;
     justify-content: space-around;
 }
+
+
 
 
 
