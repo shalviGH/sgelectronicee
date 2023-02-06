@@ -10,7 +10,7 @@
 				
 					<div  class="contBtnAndSearch">
 						<button  class="btn btn-primary btnSearchProduct" >Buscar</button> 
-						<input type="text" name="nameProduct"  class="inpSearchP" placeholder="Nombre del producto" required/>
+						<input type="text" name="nameProduct"  class="inpSearchP intpNamePro" placeholder="Busque un producto" required/>
 						
 						<select class="form-select inpSearchP " aria-label="Default select example">
 							<option selected>Categorias</option>

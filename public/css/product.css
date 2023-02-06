@@ -27,6 +27,10 @@
     margin-left: 0px;
     background-color: none;
 }
+
+.intpNamePro{
+    width: 140px;
+}
 .btnSearchProduct{
     margin-top: -5px;
     width: 75px;
