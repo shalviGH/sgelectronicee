@@ -98,7 +98,7 @@
 /*class  for container lis product*/
 .contListImage{
     display: flex;
-    height: 520px;
+    height: 495px;
     margin-top: 10px;
     overflow-y: scroll;
 

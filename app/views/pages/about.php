@@ -4,11 +4,11 @@
 
     <div class ="containerAbout">
         <div class ="contInfoCompany">
-            <label class="">Contactos</label>
-            <label>sgElectronic@gmailcom</label>
-            <label>9191321935</label>
-            <label>Horarios</label>
-            <label>Domingo a lunes de 9 AM - 7:00 PM</label>
+            <label class="lblAbout">Contactos</label>
+            <label class="lblAbout">sgElectronic@gmailcom</label>
+            <label class="lblAbout">9191321935</label>
+            <label class="lblAbout">Horarios</label>
+            <label class="lblAbout">Domingo a lunes de 9 AM - 7:00 PM</label>
         </div>
 
         <img src="<?= RUTA_URL; ?>/public/images/carRobot.jpg" width="300px" height = "160px" class="imgA" >
