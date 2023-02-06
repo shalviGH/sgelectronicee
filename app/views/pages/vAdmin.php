@@ -31,7 +31,7 @@
     </form>
     <div class="contBtnAddproduct">
         <!--button  class="btn btn-primary js-AddProduct">Agregar Producto</button-->
-        <a href="#" class="btnAnimate js-AddProduct">
+        <a href="#" class="btnAnimate btnAddProductAamin js-AddProduct">
             <span></span>
             <span></span>
             <span></span>
