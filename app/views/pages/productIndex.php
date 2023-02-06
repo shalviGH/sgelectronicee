@@ -8,7 +8,7 @@
 			<form method="POST" action="<?= RUTA_URL;?>/ProductController/searchProduct/0">
 				<div class="optionProduct">
 				
-					<div  class="contBtnAndSearchbbb">
+					<div  class="contBtnAndSearch">
 						<button  class="btn btn-primary btnSearchProduct" >Buscar</button> 
 						<input type="text" name="nameProduct"  class="inpSearchP" placeholder="Nombre del producto" required/>
 						
