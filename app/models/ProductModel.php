@@ -168,6 +168,49 @@
 		}
 
 
+		/*Funtion for search product on index */
+
+		public function searchProductIndex($data)
+		{
+			$nameProduct = $data['nameProduct'];
+			$category = $data['category'];
+
+			//echo $nameProduct ," " ,$category;
+
+			if($category == 0 && $nameProduct != "empty")
+			{
+				//echo "se buscara por nombre";
+				
+				$this->db->query('SELECT * FROM producto 
+				WHERE producto.nameProduct  LIKE  "%":nameProduct"%" ');
+				
+				$this->db->bind(':nameProduct', $data['nameProduct']);
+			}
+			elseif($category != 0 && $nameProduct == "empty")
+			{
+				$this->db->query('SELECT * FROM producto 
+								WHERE producto.category  LIKE  "%":idCategory"%" ');
+				
+				$this->db->bind(':idCategory',$data['category']);
+			}
+			elseif($category == 0 && $nameProduct == "empty")
+			{
+				$this->db->query('SELECT * FROM producto');
+			}
+			elseif($category != 0 && $nameProduct != "empty")
+			{
+				echo "se buscara por nombre y categoria";
+			}
+
+
+			$result = $this->db->getRegisters();
+
+			return $result;
+
+
+		}
+
+
 		//function for update product------------------function for update product------------------
 		//function for update product------------------function for update product------------------
 

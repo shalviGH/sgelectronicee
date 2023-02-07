@@ -405,6 +405,61 @@
 		
 		}
 
+		//function for search product on index no start session
+		//function for search product on index no start session
+		//function for search product on index no start session
+		public function searchProductIndex()
+		{
+			
+			if($_SERVER['REQUEST_METHOD'] == 'POST')
+			{
+				$nameProduct = $_POST['nameProduct'];
+				$category = $_POST['category'];
+
+				if($nameProduct == null){
+					//echo "el nombre del producto esta vacio";
+					$nameProduct = "empty";
+				}
+				elseif($category == 0) {
+					$category = 0;
+					//echo "no se esta buscando por categoria";
+				}
+
+				$data = [
+					'nameProduct'=> $nameProduct,
+					'category' => $category,
+				];
+
+				//echo "El producto a buscar el ".$data['idProduct'];
+				if ($this->productModel->searchProductIndex($data)) 
+				{
+					$productSearch = $this->productModel->searchProductIndex($data);
+					$productImage = $this->productModel->getProductImage();
+
+					$data = [
+						'productFound' => $productSearch,
+						'productImage' => $productImage
+					];
+					
+					$this->view('/pages/productIndex', $data);
+				}
+				else{
+					echo "ocurrio un error";
+				}
+				
+			}
+			
+
+		
+		}
+
+
+
+
+
+
+
+
 
 
 

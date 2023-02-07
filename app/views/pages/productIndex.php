@@ -5,20 +5,20 @@
 
 ?>
 
-			<form method="POST" action="<?= RUTA_URL;?>/ProductController/searchProduct/0">
+			<form method="POST" action="<?= RUTA_URL;?>/ProductController/searchProductIndex/">
 				<div class="optionProduct">
 				
 					<div  class="contBtnAndSearch">
 						<button  class="btn btn-primary btnSearchProduct" >Buscar</button> 
-						<input type="text" name="nameProduct"  class="inpSearchP intpNamePro" placeholder="Busque un producto" required/>
+						<input type="text" name="nameProduct"  class="inpSearchP intpNamePro" placeholder="Busque un producto" />
 						
-						<select class="form-select inpSearchP " aria-label="Default select example">
-							<option selected>Categorias</option>
-							<option value="1" class="js-category">Electronica</option>
-							<option value="2" class="js-category">Audio</option>
-							<option value="3" class="js-category">Computo</option>
-							<option value="4" class="js-category">Hogar</option>
-							<option value="5" class="js-category">Gamer</option>
+						<select class="form-select inpSearchP" name="category" aria-label="Default select example">
+							<option value="0">Categorias</option>
+							<option value="1" class="js-category1">Electronica</option>
+							<option value="2" class="js-category1">Audio</option>
+							<option value="3" class="js-category1">Computo</option>
+							<option value="4" class="js-category1">Hogar</option>
+							<option value="5" class="js-category1">Gamer</option>
 						</select>
 
 					</div>
