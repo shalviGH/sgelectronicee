@@ -1,13 +1,10 @@
-<?php 
-	require RUTA_APP.'/views/inc/header.php'; 
+		<?php 
+			require RUTA_APP.'/views/inc/header.php'; 
 
-    $numImg = 1;
-
-?>
-
+			$numImg = 1;
+		?>
 			<form method="POST" action="<?= RUTA_URL;?>/ProductController/searchProductIndex/">
 				<div class="optionProduct">
-				
 					<div  class="contBtnAndSearch">
 						<button  class="btn btn-primary btnSearchProduct" >Buscar</button> 
 						<input type="text" name="nameProduct"  class="inpSearchP intpNamePro" placeholder="Busque un producto" />
@@ -20,20 +17,13 @@
 							<option value="4" class="js-category1">Hogar</option>
 							<option value="5" class="js-category1">Gamer</option>
 						</select>
-
 					</div>
 				</div>
 			</form>
 
-
-
-
 			<?php
 				require RUTA_APP.'/views/pages/viewsProduct/viewProductForUser.php';  //print_r($data); 
 			?>
-
-
-
    
 			<!--Nodal for delete product --> <!--Nodal for delete product --> <!--Nodal for delete product --> 
 			<!--Nodal for delete product --> <!--Nodal for delete product --> <!--Nodal for delete product --> 

@@ -260,9 +260,9 @@
 					{	
 						$_SESSION['inicio'] = 'false';
 						$_SESSION['error']= 'vdeas';
-	
-						redirection('/Paginas/login');
 						//echo "usuario no encontrado";
+						redirection('/Paginas/login');
+						
 					}	
 
 				}

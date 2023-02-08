@@ -29,6 +29,16 @@
 		<?php	# code...
 		}		
 	}
+	if(isset($_SESSION['inicio'])){
+		if($_SESSION['inicio'] == 'false'){?>
+			<div class="alert alert-danger alert-dismissable msAlert">
+				<button type="button" class="close" data-dismiss="alert">&times;</button>
+				<strong>¡Message!</strong> El suario / contraseña incorrecto intente nuevamente.
+			</div>
+
+<?php		
+		}
+	}
 	
 
 ?>

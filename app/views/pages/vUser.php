@@ -2,28 +2,38 @@
     require RUTA_APP.'/views/inc/header.php';  //print_r($data);
 ?>
 
-<form method="POST" action="<?= RUTA_URL;?>/ProductController/searchProduct/0">
+<form method="POST" action="<?= RUTA_URL;?>/ProductController/searchProduct">
     <div class="optionProduct">
 
         <div  class="contBtnAndSearchbbb">
             <button  class="btn btn-primary btnSearchProduct" >Buscar</button> 
-            <input type="text" name="nameProduct"  class="inpSearchP" placeholder="Busca un producto" required/>
-            <select class="form-select inpSearchP"  aria-label="Default select example">
-                <option selected>Categorias</option>
-                <option value="1" class="js-category">Electronica</option>
-                <option value="2" class="js-category">Audio</option>
-                <option value="3" class="js-category">Computo</option>
-                <option value="4" class="js-category">Hogar</option>
-                <option value="5" class="js-category">Gamer</option>
+            <input type="text" name="nameProduct"  class="inpSearchP" placeholder="Busca un producto"/>
+            <select class="form-select inpSearchP" name="category" aria-label="Default select example">
+                <option value="0">Categorias</option>
+                <option value="1" class="js-category2">Electronica</option>
+                <option value="2" class="js-category2">Audio</option>
+                <option value="3" class="js-category2">Computo</option>
+                <option value="4" class="js-category2">Hogar</option>
+                <option value="5" class="js-category2">Gamer</option>
             </select>
         </div>
     </div>
 </form>
 
     <?php 
-       
+       if(isset($_SESSION['Search'])){
+        if($_SESSION['Search'] == "notFound"){?>
+
+            <div class="alert alert-warning alert-dismissable msAlert">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                <strong>¡Message!</strong> No se encontraron resultados de las busqueda.
+            </div>
+    <?php
+        }
+       }
     ?>
 
+    
     <!--div class="alert alert-warning alert-dismissable msAlert">
         <button type="button" class="close" data-dismiss="alert">&times;</button>
         <strong>¡Cuidado!</strong> Es muy importante que leas este mensaje de alerta.

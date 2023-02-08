@@ -12,19 +12,19 @@
 
 
     <!--Container of elements of the view elements--> 
-    <form method="POST" action="<?= RUTA_URL;?>/ProductController/searchProduct/0">
+    <form method="POST" action="<?= RUTA_URL;?>/ProductController/searchProduct">
         <div class="optionProduct">
            
             <div  class="contBtnAndSearchbbb">
             <button  class="btn btn-primary btnSearchProduct" >Buscar</button> 
-            <input type="text" name="nameProduct"  class="inpSearchP" placeholder="Busca un producto" required/>
-            <select class="form-select inpSearchP"  aria-label="Default select example">
-                <option selected>Categorias</option>
-                <option value="1" class="js-category">Electronica</option>
-                <option value="2" class="js-category">Audio</option>
-                <option value="3" class="js-category">Computo</option>
-                <option value="4" class="js-category">Hogar</option>
-                <option value="5" class="js-category">Gamer</option>
+            <input type="text" name="nameProduct"  class="inpSearchP" placeholder="Busca un producto"/>
+            <select class="form-select inpSearchP" name="category" aria-label="Default select example">
+                <option vaalue="0">Categorias</option>
+                <option value="1" class="js-category3">Electronica</option>
+                <option value="2" class="js-category3">Audio</option>
+                <option value="3" class="js-category3">Computo</option>
+                <option value="4" class="js-category3">Hogar</option>
+                <option value="5" class="js-category3">Gamer</option>
             </select>
         </div>
         </div>
@@ -137,10 +137,6 @@
                             endforeach;
                     
                     ?>
-
-                            
-
-                    
                 </tbody>    
             </table>
         </div>
@@ -187,13 +183,6 @@
         </div>
     </div>
 
-
-
- 
-
-
-    
-
     <?php
         require RUTA_APP.'/views/pages/viewsProduct/crudProduct.php';  //print_r($data); 
     ?>
@@ -202,134 +191,6 @@
 
 
 
-
-
-    <div class="modal js-ModalSaleProduct">
-        <div class="bodyModal">
-            
-            <form action="<?= RUTA_URL;?>/ProductController/saleProduct" method="POST" enctype="multipart/form-data" class="formModal">
-                <label class="lblTitleModal">Alert c !</label>
-                <input type="hidden" value="" id="js-idPro" name = "idProduct" />
-                <!--input type="text" value="" id="js-cantP" name = "cantProduct" /-->
-                <input type="hidden" value="" id="js-precioP" name = "precioProduct"/>
-                
-                <div class="contMsModal">
-                    <label>Esta Seguro realizar la venta</label>
-                </div>
-                        <label for="lang">total a vender</label>
-                        <select name="cantProduct"  width="100px" height="170px" id="lang js-cantP" class="selectTotal js-CantidadP">
-                        <?php
-                           $total = 10;
-                            for ($i=1; $i < $total ; $i++) { 
-                                # code...
-                        ?>
-                        <option value="<?php echo $i; ?>" class = "js-cant3" > <?php echo $i; ?>  </option>
-                        <?php
-                            }
-                        ?>
-                    </select>
-
-                    <label for="lang">total a pagar</label>
-                    <input type="text" value="" id="js-pagoTotal" name = "precioProduct"/>
-                
-                <div class="dataP contBtnModal">
-                    <input type="submit" value="Aceptar" class="btn btn-primary" required/>
-                    <i class="btn btn-danger js-btnCancelSaleProduct " unset >Cancel</i>
-                </div>
-            </form>
-        </div>
-    </div>
-
-    
-    
-    <!--Modal for add product---><!--Modal for add product---><!--Modal for add product--->
-    <!--Modal for add product---><!--Modal for add product---><!--Modal for add product--->
-
-
-
-    <div class="modal js-ModalAddProduct">
-        <div class="bodyModal">
-            
-            <form action="<?= RUTA_URL;?>/ProductController/addProduct" method="post" enctype="multipart/form-data" class="formModal">
-                <label>Add product</label>
-                
-                <div class="dataP">
-                    <label>Codigo de Barra:</label>
-                    <input type="text" name="codBarra" required />
-                </div>
-                <div class="dataP">
-                    <label>Nombre:</label>
-                    <input type="text" name="namePro" required/>
-                </div>
-                <div class="dataP">
-                    <label>Descripcion:</label>
-                    <input type="text" name="descPro" required/>
-                </div>
-                <div class="dataP">
-                    <label>Precio:</label>
-                    <input type="text" name="pricePro" required/>
-                </div>
-                <div class="dataP">
-                    <label>Cantidad:</label>
-                    <input type="text" name="amount" required />
-                </div>
-                <div class="dataP">
-                    <label>Categoria:</label>
-                    <select class="form-select inpSearchP4" name="category">
-                        <option value="1">Electronica</option>
-                        <option value="2">Audio</option>
-                        <option value="3">Computo</option>
-                        <option value="4">Hogar</option>
-                        <option value="5">Gamer</option>
-                    </select>
-                </div>
-
-
-
-                <div class="dataP">
-                    <label>Imagen:</label>
-                    <input type="file"  name="photo" multiple  required/>
-                </div>
-                <div class="dataP contBtnModal">
-                    <input type="submit" value="Agregar" class="btn btn-primary" required/>
-                    <i class="btn btn-danger js-btnCancel">Cancel</i>
-                </div>
-            </form>
-        </div>
-    </div>
-
-
-
-
-   <!--::::::::::::::::::Modal for update product:::::::::::::::--> 
-   <!--::::::::::::::::::Modal for update product:::::::::::::::--> 
-   <!--::::::::::::::::::Modal for update product:::::::::::::::--> 
-
-    <div class="modal js-ModalAddImage2">
-        <div class="bodyModal">
-            
-            <form action="<?= RUTA_URL;?>/ProductController/updateProduct" method="post" enctype="multipart/form-data" class="formModal">
-                <label>Update Infomation</label>
-                
-                <div class="dataP">
-                    <label>Codigo de Barra:</label>
-                    <input id="js-codBarra" type="text" name="codBarra" required />
-                </div>
-                <div class="dataP">
-                    <label>Cantidad:</label>
-                    <input type="text" id="js-cantPro" name="amount" required />
-                </div>
-                <div class="dataP">
-                    <label>Imagen:</label>
-                    <input type="file" id="js-imgPro" name="photo" multiple  required/>
-                </div>
-                <div class="dataP contBtnAddP">
-                    <input type="submit" value="Aactualizar" class="btn btn-success" required/>
-                    <i class="btn btn-danger js-btnCancelUpdate">Cancel</i>
-                </div>
-            </form>
-        </div>
-    </div>
 
 
 <?php require RUTA_APP.'/views/inc/footer.php';  ?>

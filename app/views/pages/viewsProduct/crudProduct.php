@@ -12,7 +12,7 @@
                 <input type="hidden" value="" id="js-precioP" name = "precioProduct"/>
                 
                 <div class="contMsModal">
-                    <label>Esta Seguro realizar la venta</label>
+                    <label>Esta Seguro realizar la venta2</label>
                 </div>
                         <label for="lang">total a vender</label>
                         <select name="cantProduct"  width="100px" height="170px" id="lang js-cantP" class="selectTotal js-CantidadP">
@@ -30,9 +30,9 @@
                     <label for="lang">total a pagar</label>
                     <input type="text" value="" id="js-pagoTotal" name = "precioProduct"/>
                 
-                <div class="dataP contBtnAddP">
-                    <input type="submit" value="Aceptar" class="btnAddP" required/>
-                    <i class="btnAddP btnpCancel js-btnCancelSaleProduct bnt" unset >Cancel</i>
+                <div class="dataP contBtnModal">
+                    <input type="submit" value="Aceptar" class="btn btn-primary" required/>
+                    <i class="btn btn-danger js-btnCancelSaleProduct " unset >Cancel</i>
                 </div>
             </form>
         </div>
@@ -44,13 +44,13 @@
     <!--Modal for add product---><!--Modal for add product---><!--Modal for add product--->
 
 
-
+    
+    <!--Modal for add product---><!--Modal for add product---><!--Modal for add product--->
+    <!--Modal for add product---><!--Modal for add product---><!--Modal for add product--->
     <div class="modal js-ModalAddProduct">
         <div class="bodyModal">
-            
             <form action="<?= RUTA_URL;?>/ProductController/addProduct" method="post" enctype="multipart/form-data" class="formModal">
-                <label>Add product</label>
-                
+                <label>Agregar nuevo producto</label>
                 <div class="dataP">
                     <label>Codigo de Barra:</label>
                     <input type="text" name="codBarra" required />
@@ -72,12 +72,22 @@
                     <input type="text" name="amount" required />
                 </div>
                 <div class="dataP">
+                    <label>Categoria:</label>
+                    <select class="form-select inpSearchP4" name="category">
+                        <option value="1">Electronica</option>
+                        <option value="2">Audio</option>
+                        <option value="3">Computo</option>
+                        <option value="4">Hogar</option>
+                        <option value="5">Gamer</option>
+                    </select>
+                </div>
+                <div class="dataP">
                     <label>Imagen:</label>
                     <input type="file"  name="photo" multiple  required/>
                 </div>
-                <div class="dataP contBtnAddP">
-                    <input type="submit" value="Agregar" class="btnAddP" required/>
-                    <i class="btnAddP btnpCancel js-btnCancel bnt">Cancel</i>
+                <div class="dataP contBtnModal">
+                    <input type="submit" value="Agregar" class="btn btn-primary" required/>
+                    <i class="btn btn-danger js-btnCancel">Cancel</i>
                 </div>
             </form>
         </div>
@@ -133,19 +143,19 @@
 
 
 
-       <!--Nodal for delete product --> <!--Nodal for delete product --> <!--Nodal for delete product --> 
-       <!--Nodal for delete product --> <!--Nodal for delete product --> <!--Nodal for delete product --> 
-       <div class="modal js-ModalDeleteProduct">
-            <div class="bodyModal">
-                <form action="<?= RUTA_URL;?>/ProductController/deleteProduct" method="POST" class="formModal js-formDelete">
-                        <label id="js-inpNomPro" class="modalTitle">¡ alert !</label>
-                        <input type="hidden" class="js-codBarra" name="codBarra"  >
-                        <label id="js-inpNomPro" class="msModal">Esta seguro de eliminar el Producto </label> 
-                    
-                    <div class="contBtnModal">
-                        <button class="btn btn-success" >Aceptar</button>
-                        <p href="" class="btn btn-primary btnCanceDelete" unset>Cancelar</p>
-                    </div>
-                </form>
-            </div>
+    <!--Nodal for delete product --> <!--Nodal for delete product --> <!--Nodal for delete product --> 
+    <!--Nodal for delete product --> <!--Nodal for delete product --> <!--Nodal for delete product --> 
+    <div class="modal js-ModalDeleteProduct">
+        <div class="bodyModal">
+            <form action="<?= RUTA_URL;?>/ProductController/deleteProduct" method="POST" class="formModal js-formDelete">
+                    <label id="js-inpNomPro" class="modalTitle">¡ alert !</label>
+                    <input type="hidden" class="js-codBarra" name="codBarra"  >
+                    <label id="js-inpNomPro" class="msModal">Esta seguro de eliminar el Producto </label> 
+                
+                <div class="contBtnModal">
+                    <button class="btn btn-success" >Aceptar</button>
+                    <p href="" class="btn btn-primary btnCanceDelete" unset>Cancelar</p>
+                </div>
+            </form>
         </div>
+    </div>

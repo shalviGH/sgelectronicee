@@ -246,6 +246,7 @@
 			if(isset($_SESSION['datos']["idUser"]))
 			{
 				$idUser = $_SESSION['datos']["idUser"];
+				
 				$data = [
 					'idUser'=>  $idUser,
 				];
@@ -258,14 +259,21 @@
 					$data = [
 						'productApart' => $productsA,
 					];
-					
 					//print_r($data);
 					$this->view('/pages/viewsProduct/productAparts', $data);
 				}
 				else 
 				{
+
+					//print_r(count($data));
+					$productsA = $this->productModel->productApart($data);
 					
-					echo "no hay productos apartados deberia agragar productos a la lista";
+					$data = [
+						'productApart' => $productsA,
+					];
+					$this->view('/pages/viewsProduct/productAparts', $data);
+					
+					//echo "no hay productos apartados deberia agragar productos a la lista";
 					//$this->view('/pages/viewsProduct/productAparts', $data);
 				}
 			}
@@ -316,59 +324,38 @@
 			
 		}
 
-		public function searchProduct($idCategory)
+
+		/*::::::::::Function for search product on sesion star for user and admin :::::::::::*/
+		/*::::::::::Function for search product on sesion star for user and admin :::::::::::*/
+		/*::::::::::Function for search product on sesion star for user and admin :::::::::::*/
+		/*::::::::::Function for search product on sesion star for user and admin :::::::::::*/
+
+		public function searchProduct()
 		{
 			
-				if($_SERVER['REQUEST_METHOD'] == 'POST')
-				{
-					$data = [
-						'nameProduct'=> trim($_POST['nameProduct']),
-						'category'=> $idCategory,
-					];
-					//echo "El producto a buscar el ".$data['idProduct'];
-					if ($this->productModel->searchProduct($data)) 
-					{
-						$productSearch = $this->productModel->searchProduct($data);
-						$productImage = $this->productModel->getProductImage();
+			if($_SERVER['REQUEST_METHOD'] == 'POST')
+			{
+				$nameProduct = $_POST['nameProduct'];
+				$category = $_POST['category'];
 
-						$data = [
-							'productFound' => $productSearch,
-							'productImage' => $productImage
-						];
-						//print_r($productSearch);
-						if(isset($_SESSION['datos']["idUser"]))
-						{
-							$_SESSION['CRUD'] = "search";
-							$tipoUser = $_SESSION['datos']["tipoUser"];
-
-							if($tipoUser == 2){
-								$this->view('/pages/vUser', $data);
-							}else{
-							//$this->view('/pages/productView', $data);
-								$this->view('/pages/vAdmin', $data);
-							}
-						}
-						else
-						{
-							//redirection('/index', $data);
-							$this->view('/pages/productIndex', $data);
-						}
-					}
-					else 
-					{
-						echo "no se encontraron resultados";
-						redirection('/productController/getProducts');
-					}
+				if($nameProduct == null){
+					//echo "el nombre del producto esta vacio";
+					$nameProduct = "empty";
 				}
-			
-			elseif($idCategory != 0){
-				//redirection('/Paginas/index');
+				elseif($category == 0) {
+					$category = 0;
+					//echo "no se esta buscando por categoria";
+				}
+
 				$data = [
-					'category'=> $idCategory,
-					'nameProduct'=> "desc",
+					'nameProduct'=> $nameProduct,
+					'category' => $category,
 				];
+
+				//echo "El producto a buscar el ".$data['idProduct'];
 				if ($this->productModel->searchProduct($data)) 
 				{
+					$_SESSION['Search'] = "found";
 					$productSearch = $this->productModel->searchProduct($data);
 					$productImage = $this->productModel->getProductImage();
 
@@ -376,34 +363,70 @@
 						'productFound' => $productSearch,
 						'productImage' => $productImage
 					];
-
-					//$this->view('/pages/productIndex', $data);
-
+					//print_r($productSearch);
 					if(isset($_SESSION['datos']["idUser"]))
 					{
 						$_SESSION['CRUD'] = "search";
 						$tipoUser = $_SESSION['datos']["tipoUser"];
 
 						if($tipoUser == 2){
-								$this->view('/pages/vUser', $data);
-						}elseif($tipoUser == 1){
+							$this->view('/pages/vUser', $data);
+						}else{
 						//$this->view('/pages/productView', $data);
 							$this->view('/pages/vAdmin', $data);
-						}
-						else{
-							redirection('/Paginas/index', $data);
 						}
 					}
 					else
 					{
-						//redirection('/Paginas/index', $data);
-						$this->view('/pages/productIndex', $data);
+						//redirection('/index');
+						redirection('/index');
 					}
 				}
-			
+				else 
+				{
+					//echo "no se encontraron resultados";
+					$data = [
+						'nameProduct'=> "empty",
+						'category' => 0,
+					];
+
+					$productSearch = $this->productModel->searchProduct($data);
+					$productImage = $this->productModel->getProductImage();
+					//redirection('/index');
+
+					$data = [
+						'productFound' => $productSearch,
+						'productImage' => $productImage
+					];
+
+					$_SESSION['Search'] = "notFound";
+
+					if(isset($_SESSION['datos']["idUser"]))
+					{
+						//$_SESSION['CRUD'] = "search";
+						$tipoUser = $_SESSION['datos']["tipoUser"];
+
+						if($tipoUser == 2){
+							$this->view('/pages/vUser', $data);
+						}else{
+						//$this->view('/pages/productView', $data);
+							$this->view('/pages/vAdmin', $data);
+						}
+					}
+					else
+					{
+						redirection('/index');
+					}
+				}
 			}
-		
+			else 
+			{
+				/*Redirrecionamos al index si no cumple la condicion con el metodo post */
+				redirection('/index');
+			}
 		}
+
+
 
 		//function for search product on index no start session
 		//function for search product on index no start session
@@ -447,6 +470,11 @@
 					echo "ocurrio un error";
 				}
 				
+			}
+			else 
+			{
+				/*Redirrecionamos al index si no cumple la condicion con el metodo post */
+				redirection('/index');
 			}
 			
 

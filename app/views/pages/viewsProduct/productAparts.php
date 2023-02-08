@@ -5,12 +5,17 @@
    if(isset($data['productApart'])){
         $productApart = $data['productApart'];
 
-        if(empty($productApart)){
-            echo "No hay datos";
-        }
-        else{
-            echo "se encontraron datos";
-        }
+        if(empty($productApart)){ ?>
+
+            <div class="alert alert-warning alert-dismissable msAlert">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                <strong>¡Message! </strong>  Aun no cuenta con productos apartados.
+
+                <a href="<?= RUTA_URL;?>/ProductController/getProducts/"  class=" ">Apartar producto</a>
+            </div>
+        
+       <?php }
+       
     }
     
 ?>

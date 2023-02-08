@@ -128,10 +128,7 @@
 			{
 				return false;
 			}
-
 		}
-
-
 
 		
 		public function productApart($data)
@@ -146,37 +143,14 @@
 			return $result; 
 		}
 
+
+		/* Function for search produc */
 		public function searchProduct($data)
-		{
-			if($data['category'] == 0 )
-			{
-				$this->db->query('SELECT * FROM producto 
-				WHERE producto.nameProduct  LIKE  "%":nameProduct"%" ');
-				
-				$this->db->bind(':nameProduct', $data['nameProduct']);
-			}
-			else{
-				$this->db->query('SELECT * FROM producto 
-								WHERE producto.category  LIKE  "%":idCategory"%" ');
-				
-				$this->db->bind(':idCategory',$data['category']);
-			}
-
-			$result = $this->db->getRegisters();
-
-			return $result; 
-		}
-
-
-		/*Funtion for search product on index */
-
-		public function searchProductIndex($data)
 		{
 			$nameProduct = $data['nameProduct'];
 			$category = $data['category'];
 
 			//echo $nameProduct ," " ,$category;
-
 			if($category == 0 && $nameProduct != "empty")
 			{
 				//echo "se buscara por nombre";
@@ -188,6 +162,49 @@
 			}
 			elseif($category != 0 && $nameProduct == "empty")
 			{
+				//echo se buscara por categoria
+				$this->db->query('SELECT * FROM producto 
+								WHERE producto.category  LIKE  "%":idCategory"%" ');
+				
+				$this->db->bind(':idCategory',$data['category']);
+			}
+			elseif($category == 0 && $nameProduct == "empty")
+			{
+				$this->db->query('SELECT * FROM producto');
+			}
+			elseif($category != 0 && $nameProduct != "empty")
+			{
+				echo "se buscara por nombre y categoria";
+			}
+
+
+			$result = $this->db->getRegisters();
+
+			return $result;
+		}
+
+
+		/*Funtion for search product on index *//*Funtion for search product on index *//*Funtion for search product on index */
+		/*Funtion for search product on index *//*Funtion for search product on index *//*Funtion for search product on index */
+
+		public function searchProductIndex($data)
+		{
+			$nameProduct = $data['nameProduct'];
+			$category = $data['category'];
+
+			//echo $nameProduct ," " ,$category;
+			if($category == 0 && $nameProduct != "empty")
+			{
+				//echo "se buscara por nombre";
+				
+				$this->db->query('SELECT * FROM producto 
+				WHERE producto.nameProduct  LIKE  "%":nameProduct"%" ');
+				
+				$this->db->bind(':nameProduct', $data['nameProduct']);
+			}
+			elseif($category != 0 && $nameProduct == "empty")
+			{
+				//echo se buscara por categoria
 				$this->db->query('SELECT * FROM producto 
 								WHERE producto.category  LIKE  "%":idCategory"%" ');
 				
@@ -213,7 +230,6 @@
 
 		//function for update product------------------function for update product------------------
 		//function for update product------------------function for update product------------------
-
 		public function updateProductM($data)
 		{
 			$this->db->query('UPDATE producto SET 
@@ -223,7 +239,7 @@
 				amount = :amount,
 				image = :photo
 				WHERE codBarra = :cBarra ');
-
+				
 			//vincular values
 			$this->db->bind(':cBarra', $data['cBarra']);
 			$this->db->bind(':namePro', $data['namePro']);
