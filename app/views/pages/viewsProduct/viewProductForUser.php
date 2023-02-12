@@ -22,15 +22,26 @@
                     <div class="contImg js-contProducts" id="dataP">
                         <div class="contImg js-contProduct" id="dataPl">
                         <!--img  src="<?php echo RUTA_IMG?>/imgProfile.png" class="imgProduct"-->
-                            <img  src="<?php echo RUTA_IMG , ($product->image); ?>" class="imgProduct" id="urlImg"  >
+                            <img  src="<?php echo RUTA_IMG , ($product->image); ?>" 
+                            class="imgProduct" id="urlImg">
+                            
+                        
+                       
+
+
+
                             <div class="line"></div>
+                            <!--a class="tooltip" href="http:sgElectroni.com">ndbfndknbknjnjnjj
+                                <i class="fas fa-info-circle"><i>
+                                    <span class="tooltip-box">de clic sobre la imagenpara ver mas infrolmacion</span>
+                            </a--> 
                             <div class="contPrecioAvailable"><label><?php echo '$'.$product->price.'.00' ?></label><label><?php echo 'Disponible:  '.$product->amount; ?></label></div>
                             
                             <input type="hidden" id="js-idProduct" value="<?php echo $product->codBarra; ?>" />
                             
                             
                             <label class= "lblInfoProduct" style="display:none">Produc: <label class="lblInfoProduct2 js-nameProduct" id="js-nameProduct"><?php echo $product->nameProduct; ?> </label></label>
-                            <label class= "lblInfoProduct" >desc: <label class="lblInfoProduct2 js-descPro" ><?php echo $product->descrip; ?> </label></label>
+                            <label class= "lblInfoProduct" >Descripcion:<label class="lblInfoProduct2 js-descPro" ><?php echo $product->descrip; ?> </label></label>
                             <label class= "lblInfoProduct" style="display:none">Precio: <label class="lblInfoProduct2 js-prePro" ><?php echo $product->price; ?> </label></label>
                             <label class= "lblInfoProduct" style="display:none">disponibles: <label class="lblInfoProduct2 js-cantProduct"><?php echo $product->amount; ?> </label></label>
                         
@@ -56,6 +67,7 @@
                                 }
 
                             ?>
+                            
                         </div>
                         <!--div class="contBtnProduct"><a href="<?php echo RUTA_URL. '/ProductController/sistemApart/'.  $product->codBarra;  ?> " 
                             class="btn btn-success btnRealizarVenta">Apartar producto</a></div-->
@@ -69,6 +81,7 @@
                                 js-cantPro = " <?php echo $product->amount;  ?> "
 
                             >Apartar producto</a>
+                            
                         </div>
                     </div>
                 <?php 

@@ -130,14 +130,16 @@
 						
 						<?php if($view == "ProIndex"){ ?>
 						<!--li class="btnMain js-AddProduct1"> <a  class="optionMain js-btnProduct" style="color:white">Products</a></li-->
+						
+						<li class="btnMain"> <a href="<?= RUTA_URL;?>/Paginas/index" class="optionMain js-btnHome" style="color:white">Home</a></li>
 						<li class="btnMain"> <a href="<?= RUTA_URL;?>/Paginas/login" class="optionMain js-btnCreateAcount1 btnLog" style="color:white">Iniciar sesion</a></li>
-						<li class="btnMain"> <a  href="<?= RUTA_URL;?>/Paginas/index" class="optionMain js-btnProductM" style="color:white">Productos</a></li>
+						<li class="btnMain"> <a  href="<?= RUTA_URL;?>/Paginas/products" class="optionMain js-btnProductM" style="color:white">Productos</a></li>
 						<li class="btnMain"> <a href="<?= RUTA_URL;?>/Paginas/about" class="optionMain js-btnAbout " style="color:white">Aserca de nosotros</a></li>
 						
 						<?php } ?>
 
 						<?php if($view != "ProIndex"){ ?>
-						<li class="btnMain"> <a href="<?= RUTA_URL;?>/UserController/profile/" class="optionMain js-btnProfile" style="color:white">Profile</a></li>
+						<li class="btnMain"> <a href="<?= RUTA_URL;?>/UserController/profile/"  class="optionMain js-btnProfile" style="color:white">Profile</a></li>
 						<li class="btnMain"> <a href="<?= RUTA_URL;?>/UserController/closeSession" class="optionMain js-btnExit " style="color:white">Log Out</a></li>
 						<?php } ?>
 					</ul>

@@ -19,7 +19,7 @@
             <button  class="btn btn-primary btnSearchProduct" >Buscar</button> 
             <input type="text" name="nameProduct"  class="inpSearchP" placeholder="Busca un producto"/>
             <select class="form-select inpSearchP" name="category" aria-label="Default select example">
-                <option vaalue="0">Categorias</option>
+                <option value="0">Categorias</option>
                 <option value="1" class="js-category3">Electronica</option>
                 <option value="2" class="js-category3">Audio</option>
                 <option value="3" class="js-category3">Computo</option>
@@ -29,6 +29,7 @@
         </div>
         </div>
     </form>
+
     <div class="contBtnAddproduct">
         <!--button  class="btn btn-primary js-AddProduct">Agregar Producto</button-->
         <a href="#" class="btnAnimate btnAddProductAamin js-AddProduct">
@@ -39,6 +40,7 @@
             Add product
         </a>
     </div>
+
 
     <?php 
         if (isset($_SESSION['CRUD'])) 
@@ -93,10 +95,11 @@
                         <tr class="colDataT js-ConProduct">
                             <input type="hidden" value=" <?php echo $product->codBarra; ?>" id="js-idP">
                             <input type="hidden" value=" <?php echo $product->descrip; ?>" id="js-desc">
-                            <input type="Hidden" value=" <?php echo $product->image; ?>" id="js-cImg">
+                            <input type="hidden" value=" <?php echo $product->image; ?>" id="js-cImg">
+                            <input type="hidden" value=" <?php echo $product->image; ?>" class="js-cImg">
 
                             <th class="colData tcNum"><div class="divTbl"><?php echo $numL; ?></div></th>
-                            <td><div class="divTbl" ><img src="<?php echo RUTA_IMG , ($product->image); ?>" width="100px" height="100px"  style="padding:10px" /></div></td>
+                            <td><div class="divTbl" ><img src="<?php echo RUTA_IMG , ($product->image); ?>"   width="100px" height="100px"  style="padding:10px" id="imgProduct"/></div></td>
                             <td><div class="divTbl" id="js-nameProduct"><?php echo $product->nameProduct; ?></td></div>
                             <td> <div class="divTbl" id="js-priceProduct"><?php echo $product->price;  ?></td></div>
                             <td> <div class="divTbl" id="js-cantP"><?php echo $product->amount;  ?></td></div>

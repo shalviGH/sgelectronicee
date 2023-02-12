@@ -20,7 +20,7 @@ $(document).ready(function(){
     //ocultammos la listade imagnes
     $('.js-imgList').hide();
 
-    var namePro, descPro, cantPro, precio, imgUrl, idProduct; 
+    var namePro, descPro, cantPro, precio, imgUrl, idProduct, nameImage; 
 
    /*Function for show product information*//*Function for show product information*/
    /*Function for show product information*/
@@ -176,7 +176,9 @@ $(document).ready(function(){
         idProduct = $('#js-idP', this).val();
         descPro =   $('#js-desc', this).val();
         cantPro = $('#js-cantP', this).text();
-        //imgUrl = 
+        imgUrl = $('#imgProduct', this).attr('src');
+
+        nameImage = $('.js-cImg', this).val();
 
     });
 
@@ -189,9 +191,10 @@ $(document).ready(function(){
         $('#js-descPro').val(descPro);
         $('#js-precioPro').val(precio);
         $('#js-cantPro').val(cantPro);
-       $('#js-imgPro').val(imgUrl);
-
-
+        //$('#js-imgPro').val(imgUrl);
+       $('#imgUpdate').attr('src', imgUrl)
+        //alert(imgUrl+ "===="+ nameImage);
+        $('#js-nameImg').val(nameImage);
         $('.js-ModalUpdateProduct').show(2000);
         //alert("probando boton");
     });

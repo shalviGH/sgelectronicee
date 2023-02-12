@@ -10,16 +10,52 @@
 		}
 		
 		public function index(){
-			
 			$_SESSION['page'] = 'ProIndex';
-			$_SESSION['page2'] = ' ';
+			$_SESSION['page2'] = 'HomeIndex';
+		
+			$data = [
+				'titulo' => 'home',
+				'user' => "uknow",
+				//'product' => $product,
+			];
+
+			$this->view('pages/home', $data);
+		}
+
+
+		
+
+		public function home(){
+			$_SESSION['page'] = 'Home';
+			$_SESSION['page2'] = '';
+
+			if(isset($_SESSION['datos']["idUser"]))
+			{
+				$id = $_SESSION['datos']["idUser"];
+				
+				$data = [
+					'titulo' => 'home',
+					'user' => $id,
+					//'product' => $product,
+				];
+				$this->view('pages/home', $data);
+			}
+			else{
+				redirection('/Paginas/index');
+			}
+		}
+
+
+		public function products(){
+			$_SESSION['page'] = 'ProIndex';
+			
+			$_SESSION['page2'] = 'pro';
 
 			$products = $this->productModel->getProducts();
 			
 			$productImage = $this->productModel->getProductImage();
 
 				$data = [
-
 					'product' => $products,
 					'productImage' => $productImage
 				]; 	
@@ -27,40 +63,10 @@
 			$this->view('pages/productIndex', $data);
 		}
 
-		public function home(){
-			//$product = $this->productModelo->getProducts();
-			//print_r($product);
 
-			$_SESSION['page'] = 'Home';
-			//$this->view('pages/home');
-			//$articulos = $this->Users->login();
 
-			if(isset($_SESSION['datos']["idUser"]))
-			{
-				//echo $_SESSION['datos']["idUser"];
-				$id = $_SESSION['datos']["idUser"];
-				
-				//$product = $this->producModelo->getProdcuts();
-				//echo $_SESSION['dProducts']['nombreProduct'];
 
-				//print_r($product);
-				
-				//$id = $data['user'];
 
-				$data = [
-					'titulo' => 'home',
-					'user' => $id,
-					//'product' => $product,
-				];
-				
-				$this->view('pages/home', $data);
-			}
-			else{
-				redirection('/Paginas/index');
-			}
-
-			
-		}
 
 		public function login(){
 

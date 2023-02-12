@@ -23,6 +23,7 @@
 				echo "NO exist";
 
 			}
+			
 			if(isset($_SESSION['datos']["idUser"]))
 			{
 				$products = $this->productModel->getProducts();
@@ -264,7 +265,6 @@
 				}
 				else 
 				{
-
 					//print_r(count($data));
 					$productsA = $this->productModel->productApart($data);
 					
@@ -355,7 +355,8 @@
 				//echo "El producto a buscar el ".$data['idProduct'];
 				if ($this->productModel->searchProduct($data)) 
 				{
-					$_SESSION['Search'] = "found";
+					$_SESSION['Search'] = 2;
+
 					$productSearch = $this->productModel->searchProduct($data);
 					$productImage = $this->productModel->getProductImage();
 
@@ -366,7 +367,7 @@
 					//print_r($productSearch);
 					if(isset($_SESSION['datos']["idUser"]))
 					{
-						$_SESSION['CRUD'] = "search";
+						//$_SESSION['Search'] = 2;
 						$tipoUser = $_SESSION['datos']["tipoUser"];
 
 						if($tipoUser == 2){
@@ -384,6 +385,7 @@
 				}
 				else 
 				{
+					$_SESSION['Search'] = 0;
 					//echo "no se encontraron resultados";
 					$data = [
 						'nameProduct'=> "empty",
@@ -399,7 +401,7 @@
 						'productImage' => $productImage
 					];
 
-					$_SESSION['Search'] = "notFound";
+					
 
 					if(isset($_SESSION['datos']["idUser"]))
 					{
@@ -456,6 +458,8 @@
 				//echo "El producto a buscar el ".$data['idProduct'];
 				if ($this->productModel->searchProductIndex($data)) 
 				{
+					$_SESSION['Search'] = 1;
+
 					$productSearch = $this->productModel->searchProductIndex($data);
 					$productImage = $this->productModel->getProductImage();
 
@@ -467,7 +471,9 @@
 					$this->view('/pages/productIndex', $data);
 				}
 				else{
-					echo "ocurrio un error";
+					//echo "ocurrio un error";
+					$_SESSION['Search'] = 0;
+					redirection('/Paginas/products');
 				}
 				
 			}
@@ -497,54 +503,74 @@
 		/*Function for update product *//*Function for update product *//*Function for update product */
 		public function updateProduct()
 		{
-			echo "Provando funcion update";
+			
+			//echo "Provando funcion update";
 			if($_SERVER['REQUEST_METHOD'] == 'POST')
 			{
-				//recibimo la variable imagen
-				$nombreImage = $_FILES['photo']['name'];
-				$tipoImage = $_FILES['photo']['type'];
-				$tam_iamge = $_FILES['photo']['size'];
-				//Ruta de la carpeta del servidor
+				$nameImg1 = $_FILES['photo']['name'];
+				$nameImg2 =$_POST['photo2'];
+				$nameImg = " ";
 
-				if( $nombreImage == null)
-				{
-					$_SESSION['CRUD'] = "update";
-					$this->view('pages/productView', $data);
+				if(empty($nameImg1)){
+					//echo "no se recibieron daatos de img1";
+					$nameImg = $nameImg2;
+
+					//echo $nameImg;
+
+					$data = [
+						'cBarra'=> trim($_POST['codBarra']),
+						'namePro' => trim($_POST['namePro']),
+						'desc' => trim($_POST['descPro']),
+						'price' => trim($_POST['pricePro']),
+						'amount' => trim($_POST['amount']),
+						'photo' => $nameImg,
+					];
+	
+					if ($this->productModel->updateProductM($data)) {
+						redirection('/ProductController/getProducts');
+					}
+					else {
+						die('Ocurred a error');
+					}
 				}
 				else{
-					echo "los datos estan completos";
-				}
 
+					//recibimo la variable imagen
+					$nombreImage = $_FILES['photo']['name'];
+					$tipoImage = $_FILES['photo']['type'];
+					$tam_iamge = $_FILES['photo']['size'];
+					//Ruta de la carpeta del servidor
 
-				$carpetaDestino = $_SERVER['DOCUMENT_ROOT'] . RUTA_IMG ;
+					if( $nombreImage == null)
+					{
+						$_SESSION['CRUD'] = "update";
+						$this->view('pages/productView', $data);
+					}
+					else{
+						echo "los datos estan completos";
+					}
 
-				//MOVEMOS A LA IMAGEN DEL DIRECTORIO TEMPORAL AL directorio escogido
-				move_uploaded_file($_FILES['photo']['tmp_name'], $carpetaDestino.$nombreImage );
-				
-				
-				$data = [
+					$carpetaDestino = $_SERVER['DOCUMENT_ROOT'] . RUTA_IMG ;
+					//MOVEMOS A LA IMAGEN DEL DIRECTORIO TEMPORAL AL directorio escogido
+					move_uploaded_file($_FILES['photo']['tmp_name'], $carpetaDestino.$nombreImage );
 					
-					'cBarra'=> trim($_POST['codBarra']),
-					'namePro' => trim($_POST['namePro']),
-					'desc' => trim($_POST['descPro']),
-					'price'=> trim($_POST['pricePro']),
-					'amount' => trim($_POST['amount']),
-					'photo' => $nombreImage,
-				];
+					$data = [
+						
+						'cBarra'=> trim($_POST['codBarra']),
+						'namePro' => trim($_POST['namePro']),
+						'desc' => trim($_POST['descPro']),
+						'price'=> trim($_POST['pricePro']),
+						'amount' => trim($_POST['amount']),
+						'photo' => $nombreImage,
+					];
 
-				if ($this->productModel->updateProductM($data)) {
-					//$this->view('/UserController/profile', $data);
-					//$this->view('/pages/profile', $data);
-					//redirection('/UserController/profile', $data);
-					//echo "vfbsglkd";
-					redirection('/ProductController/getProducts');
-					//getProducts();
-					//echo "los datos se han actualizado conexito";
+					if ($this->productModel->updateProductM($data)) {
+						redirection('/ProductController/getProducts');
+					}
+					else {
+						die('Ocurred a error');
+					}
 				}
-				else {
-					die('Ocurred a error');
-				}
-				//print_r($data);
 			}
 
 			else{

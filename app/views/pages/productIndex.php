@@ -2,6 +2,20 @@
 			require RUTA_APP.'/views/inc/header.php'; 
 
 			$numImg = 1;
+
+			if(isset($_SESSION['Search'])){
+				$values = $_SESSION['Search'];
+				if($values == 0){ ?>
+					<div class="alert alert-info alert-dismissable msAlert">
+						<button type="button" class="close" data-dismiss="alert">&times;</button>
+						<strong>¡Message!</strong> No se encontraron resultados de las busqueda.
+					</div>
+			<?php }
+				/*elseif($values == 1){
+					echo "SE encontrasron resultado de la busqueda";
+				}*/
+			}
+		
 		?>
 			<form method="POST" action="<?= RUTA_URL;?>/ProductController/searchProductIndex/">
 				<div class="optionProduct">
@@ -45,7 +59,12 @@
 		
 
 
-<?php require RUTA_APP.'/views/inc/footer.php';  ?>
+<?php 
+	$_SESSION['Search'] = 3;
+
+	require RUTA_APP.'/views/inc/footer.php';  
+
+?>
 
 
 

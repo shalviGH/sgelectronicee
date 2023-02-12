@@ -16,46 +16,42 @@ $(document).ready(function() {
 		$('.js-btnProduct').addClass('btnMainSelected');
 		//alert('la vista es '+viewPage); 
 	}
-	else if (viewPage == 'Rad') 
-	{ 
-		$('.js-btnRad').addClass('btnMainSelected');
-		//alert('la vista es '+viewPage); 
-	}
-	else if (viewPage == 'Employed') 
-	{ 
-		$('.js-btnEmployed').addClass('btnMainSelected');
-		//alert('la vista es '+viewPage); 
-	}
-	else if (viewPage == 'Login') 
-	{ 
-		$('.js-btnLog').addClass('btnMainSelected');
-		//$('.js-btnHome').addClass('btnMainSelected');
-
-		//alert('vhbv');
-		//('#js-btnApartUst').addClass('btnApart23');
-		//alert('la vista es '+viewPage); 
-	}
-	else if (viewPage == 'ProIndex' && viewPage2 == ' ') 
+	else if (viewPage == 'ProIndex' && viewPage2 == 'pro') 
 	{ 
 		//$('.js-btnLog').addClass('btnMainSelected');
 		$('.js-btnProductM').addClass('btnMainSelected');
 
-		//alert('vhbv');
-		//('#js-btnApartUst').addClass('btnApart23');
-		//alert('la vista es '+viewPage); 
 	}
 	else if(viewPage2 == 'ProIndex2' && viewPage == 'ProIndex') 
 	{ 
 		$('.btnLog').addClass('btnMainSelected');
-		//$('.js-btnHome').addClass('btnMainSelected');
-
-		//alert('vhbv');
-		//('#js-btnApartUst').addClass('btnApart23');
-		//alert('la vista es '+viewPage); 
+		
 	}
 	else if (viewPage == 'ProIndex' && viewPage2 == 'about') {
 		$('.js-btnAbout').addClass('btnMainSelected');
 	}
+	else if (viewPage == 'ProIndex' && viewPage2 == 'HomeIndex') {
+		$('.js-btnHome').addClass('btnMainSelected');
+	}
+
+	$('.optionMain').hover(function() {
+		$(this).removeClass('btnMainSelected');
+	}).on( "mouseleave", function() {
+			//var clas = $('.optionMain').attr('class');
+		if(viewPage2 == 'HomeIndex'){
+			$('.js-btnHome').addClass('btnMainSelected');
+		}
+		if(viewPage2 == 'ProIndex2'){
+			$('.btnLog').addClass('btnMainSelected');
+		}
+		if(viewPage2 == 'pro'){
+			$('.js-btnProductM').addClass('btnMainSelected');
+		}
+		if(viewPage2 == 'about'){
+			$('.js-btnAbout').addClass('btnMainSelected');
+		}
+		//$(this).addClass('btnMainSelected');
+	});
 
 	
 

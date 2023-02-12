@@ -128,7 +128,9 @@
                 </div>
                 <div class="dataP">
                     <label>Imagen:</label>
-                    <input type="file" id="js-imgPro js-imgPro2" value ="ccc" name="photo" multiple/>
+                   <img src="" width="50px" height="50px" id="imgUpdate"> 
+                    <input type="file" id="js-imgPro js-imgPro2" value ="ccc hhj" name="photo" multiple/>
+                    <input type="text" id="js-nameImg" value ="" name="photo2" multiple/>
                 </div>
                 <div class="dataP contBtnModal">
                     <input type="submit" value="Aactualizar" class="btn btn-success"/>

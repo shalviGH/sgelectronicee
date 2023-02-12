@@ -21,8 +21,7 @@
 </form>
 
     <?php 
-       if(isset($_SESSION['Search'])){
-        if($_SESSION['Search'] == "notFound"){?>
+        if($_SESSION['Search'] == 0){?>
 
             <div class="alert alert-warning alert-dismissable msAlert">
                 <button type="button" class="close" data-dismiss="alert">&times;</button>
@@ -30,7 +29,10 @@
             </div>
     <?php
         }
-       }
+        
+       
+       $_SESSION['Search'] = 6;
+     // echo  $_SESSION['Search'];
     ?>
 
     
@@ -101,46 +103,12 @@
 
 
 
-    <?php
-        require RUTA_APP.'/views/pages/viewsProduct/crudProduct.php';  //print_r($data); 
-    ?>
 
+<?php 
 
+    //require RUTA_APP.'/views/pages/viewsProduct/crudProduct.php';  //print_r($data); 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-     
-  
-
-
+   
+    require RUTA_APP.'/views/inc/footer.php';  
     
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-<?php require RUTA_APP.'/views/inc/footer.php';  ?>
+?>

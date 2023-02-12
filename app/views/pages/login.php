@@ -153,7 +153,13 @@
 
 	
 
- <?php require RUTA_APP.'/views/inc/footer.php';  ?>
+ <?php 
+	$_SESSION['register'] = "empty";
+	$_SESSION['inicio'] = "empty";
+	 require RUTA_APP.'/views/inc/footer.php';  
+ 
+ 
+ ?>
 
 
 

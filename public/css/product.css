@@ -385,6 +385,36 @@ table {
     margin-bottom: 10px;
 }
 
+/*class fortootip message ::::::::::::::::::*//*class fortootip message ::::::::::::::::::*/
+/*class fortootip message ::::::::::::::::::*//*class fortootip message ::::::::::::::::::*/
+.tooltip{
+    font-weight: normal;
+    color: rgb(37, 118, 162);
+    text-decoration: none;
+    position: relative;
+}
+
+.tooltip:hover{
+    text-decoration: underline;
+}
+
+.tooltip-box{
+    position: absolute;
+    background-color: black;
+    line-height: 20px;
+    z-index: 500;
+    text-align: center;
+    color: #cd1d1d;
+    font-size: 14px;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.tooltip-box::after{
+    content: "";
+}
+
+
 
 @media screen and (min-width: 769px){
    /*container button and search*/
