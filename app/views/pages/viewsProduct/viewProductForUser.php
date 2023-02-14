@@ -21,6 +21,7 @@
                 ?>
                     <div class="contImg js-contProducts" id="dataP">
                         <div class="contImg js-contProduct" id="dataPl">
+                            <!--label><?php echo $product->nameProduct; ?></label-->
                         <!--img  src="<?php echo RUTA_IMG?>/imgProfile.png" class="imgProduct"-->
                             <img  src="<?php echo RUTA_IMG , ($product->image); ?>" 
                             class="imgProduct" id="urlImg">
@@ -39,9 +40,22 @@
                             
                             <input type="hidden" id="js-idProduct" value="<?php echo $product->codBarra; ?>" />
                             
+                            <?php
+                               $lenght = strlen($product->descrip);
+                            
+                            ?>
                             
                             <label class= "lblInfoProduct" style="display:none">Produc: <label class="lblInfoProduct2 js-nameProduct" id="js-nameProduct"><?php echo $product->nameProduct; ?> </label></label>
-                            <label class= "lblInfoProduct" >Descripcion:<label class="lblInfoProduct2 js-descPro" ><?php echo $product->descrip; ?> </label></label>
+                            <label class= "lblInfoProduct" >Descripcion:
+                                <?php if($lenght>25){?>
+                                    <marquee class="lblInfoProduct2 js-descPro" ><?php echo $product->descrip; ?> </marquee>
+                       
+                                <?php } else{?>
+                                <label class="lblInfoProduct2 js-descPro" ><?php echo $product->descrip; ?> </label>
+                                <?php } ?> 
+                            
+                            
+                            </label>
                             <label class= "lblInfoProduct" style="display:none">Precio: <label class="lblInfoProduct2 js-prePro" ><?php echo $product->price; ?> </label></label>
                             <label class= "lblInfoProduct" style="display:none">disponibles: <label class="lblInfoProduct2 js-cantProduct"><?php echo $product->amount; ?> </label></label>
                         
